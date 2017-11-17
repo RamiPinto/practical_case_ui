@@ -1,8 +1,8 @@
----
+﻿---
 title: User Interfaces - Case Study (group 10)
 author:
     - Daniel Martín Blázquez - 100346096
-    - Maryna Kotok -
+    - Maryna Kotok - 100379764
     - Ramiro Pinto Prieto - 100346042
     - Richard Lopez - 100382007
 geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"
