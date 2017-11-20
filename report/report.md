@@ -1,4 +1,4 @@
-﻿---
+---
 title: User Interfaces - Case Study (group 10)
 author:
     - Daniel Martín Blázquez - 100346096
