@@ -1,0 +1,35 @@
+
+Here we can comment everything in one place or create new txt to know when you changed sth to avoid overlapping our files.
+
+I changed a little a structure of project. 
+We talked to her last time and decided to remove favourites videos, 
+because it s pretty same that playlists. So
+We will have just :
+-home page
+-playlists
+-play page
+-sign in/up(I have done the functionalities, so just design here)
+
+for now it is but if we will finish it earlier , we can add more pages if you want.
+
+And also we need button of SIGN UP in our design and it will be on every page?
+
+I would like to do with PHP, in that case it will be more realistic and I asked her and she said that we can use instead of .html -> .php and also instead of local Storage -> PHP code; 
+
+.php is the same what .html, so you can write there a code html in normal, usual way, 
+but additionally I will be able to add there some code from back-end and database part, so just keep coding in .php files
+, please:) I hope , you  are ok with it?
+
+And for that, to check the functionalities and to see the .php files you need to have server on your computer
+So I have XAMPP, you can have sth else , doesnt matter and after you download it, just put in browser localhost/(path to file). If you need help, let me know:)
+
+So for now we need solve which design we will have finally. So let's do just it, don't think about functionality xD
+
+Do you want to use Bootsrap? to make it more easier , if not , we can start implement it by ourselves.
+Just maybe let's devide pages between us, of course, after we finish template xD
+
+So write here which one you want, please:)
+
+And if you have any idea or questions, you are welcome!:)
+
+Sorry for my English mistakes in advance!:)
