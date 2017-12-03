@@ -122,6 +122,21 @@ input, select {
 
 }
 
+input[type=search] {
+    width: 400px;
+    box-sizing: border-box;
+    border: 2px solid #ffcc00;
+    border-radius: 4px;
+    font-size: 26px;
+    horizontal-align:left;
+    background-color: #fff0b3;
+    background-image: url('https://cdn4.iconfinder.com/data/icons/colicon/24/search_magnifier_magnifying_glass-128.png') top right fixed ;
+    background-position: 0px 0px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+  }
+
+
 input.large, select.large{
 	  width : 90%;
     height: 30px;
@@ -165,9 +180,9 @@ div{
 }
 
 h2 {
-	color: #4CAF50;
-  font-family:"Helvetica";
-  font-size:20px;
+	color: black;
+  font-family:"Comic Sans MS";
+  font-size:30px;
   font-weight: 900;
 }
 
@@ -211,6 +226,19 @@ p.short3{
 
 
 /*Submit button*/
+
+.searchButton {
+  position: relative;  
+  border: 1px solid #ffcc00;
+  background: #ffcc00;
+  text-align: center;
+  color: #666666;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right:15%;
+  margin-bottom:5%;
+}
 
 .button {
   float:right;
