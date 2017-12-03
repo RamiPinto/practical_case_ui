@@ -23,37 +23,83 @@
 ul.topnav {
     list-style-type: none;
     font-family:"Helvetica";
-    font-size:20px;
+    font-size:26px;
     font-weight: 900;
     margin: 0;
-    padding: 0;
+    padding-left: 20px;
     overflow: hidden;
-    background-color: #333;
+    background-color: #00ccff;
     position: fixed;
     width: 100%;
     z-index: 2;
 
 
 }
+
 ul.topnav li a {
     display: block;
-    color: white;
+    color: #ffcc00;
     text-align: center;
-    padding: 18px 16px;
+    padding: 5px 4px;
     text-decoration: none;
+    z-index: 4;
 }
-ul.topnav li a:hover:not(.active) {background-color: #111;padding:9px}
+
+.topnav a:hover{
+  background-color: #ddd;
+  color: black;
+}
 
 }
 
 /*Body*/
-body {margin: 0;}
+body {
+  margin: 0;
+}
+
+html{
+  background: url("https://cdn.wallpapersafari.com/30/97/viPLeI.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 img.proPic {
-  position: relative;
-    top: 0; margin-top:-10px; left: 0; right:0;
+    position: relative;
+    top: 0; margin-top: 0px; left: 0; right:0;
     margin: auto;
-    width:60px;height:40px;
+    width:60px;height:60px;
+    align:left;
+}
+
+img.redHand {
+    position: relative;
+    top: 20; margin-top:-10px; left: 0; right:0;
+    margin: auto;
+    padding-right: 0px;
+    width:50px;height:50px;
+    align:left;
+    z-index: 3;
+}
+
+img.signIn {
+    position: relative;
+    display: block;
+    top: 20; margin-top:-10px; left: 0; right:0;
+    margin: auto;
+    padding-right: 5px;
+    width:70px;height:60px;
+    align:right;
+}
+
+img.menu {
+    position: relative;
+    display: block;
+    top: 20; margin-top:-10px; left: 0; right:0;
+    margin: auto;
+    padding-right: 5px;
+    width:70px;height:60px;
     align:right;
 }
 
@@ -115,7 +161,6 @@ input.short2 {
     }
 
 div{
-  background-image: url("https://cdn.wallpapersafari.com/30/97/viPLeI.jpg");
   padding-top: 100px;
 }
 
@@ -198,7 +243,7 @@ p.short3{
     background-color: #333;
     color: #ffffff;
     text-align: center;
-    font-size: 12px;
+    font-size: 18px;
     padding: 38px;
     z-index: -2;
 
