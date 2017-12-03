@@ -123,12 +123,12 @@ input, select {
 }
 
 input[type=search] {
-    width: 400px;
+    width: 40%;
     box-sizing: border-box;
     border: 2px solid #ffcc00;
     border-radius: 4px;
-    font-size: 26px;
-    horizontal-align:left;
+    font-size: 24px;
+    font-family: "Comic Sans MS";
     background-color: #fff0b3;
     background-image: url('https://cdn4.iconfinder.com/data/icons/colicon/24/search_magnifier_magnifying_glass-128.png') top right fixed ;
     background-position: 0px 0px; 
