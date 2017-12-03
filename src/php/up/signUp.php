@@ -9,16 +9,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<script src='https://www.google.com/recaptcha/api.js'></script>
-
-	<style>
-		.error
-		{
-			color: red;
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	</style>
-
+	<link rel="stylesheet" href="../../style/signUp.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -33,71 +26,70 @@
 
 <form action="include.php" method="post">
 	
-	Nickname: <br> <input type="text" name="nickname"><br>
+	<input type="text" name="nickname" placeholder="NICKNAME"><br>
 
 	<?php
 		if (isset($_SESSION['e_nickname']))
 		{
-			echo '<div class="error">'.$_SESSION['e_nickname'].'</div>';
+			echo '<div class="error">'.$_SESSION['e_nickname'].'</div><br>';
 			unset($_SESSION['e_nickname']);
 		}
 	?>
 
-	Email: <br> <input type="text" name="email"><br> 
+	<input type="text" name="email" placeholder="E-MAIL"><br> 
 
 	<?php
 		if (isset($_SESSION['e_email']))
 		{
-			echo '<div class="error">'.$_SESSION['e_email'].'</div>';
+			echo '<div class="error">'.$_SESSION['e_email'].'</div><br>';
 			unset($_SESSION['e_email']);
 		}
 	?>
 
-	Password: <br> <input type="password" name="password1"> <br>
+	<input type="password" name="password1" placeholder="PASSWORD"> <br>
 
 	<?php
 		if (isset($_SESSION['e_password']))
 		{
-			echo '<div class="error">'.$_SESSION['e_password'].'</div>';
+			echo '<div class="error">'.$_SESSION['e_password'].'</div><br>';
 			unset($_SESSION['e_password']);
 		}
 	?>
 
-	Repeat password: <br> <input type="password" name="password2" > <br> 
+	<input type="password" name="password2" placeholder="REPEAT PASSWORD"> <br> 
 
 	<?php
 		if (isset($_SESSION['e_repeat']))
 		{
-			echo '<div class="error">'.$_SESSION['e_repeat'].'</div>';
+			echo '<div class="error">'.$_SESSION['e_repeat'].'</div><br>';
 			unset($_SESSION['e_repeat']);
 		}
 	?>
 
-	<label><input type="checkbox" name="rules">I agree with rules</label> <br> 
+	<label><input type="checkbox" class="checkbox" name="rules" checked="">I agree with rules</label>  
 	<?php
 		if (isset($_SESSION['e_rules']))
 		{
-			echo '<div class="error">'.$_SESSION['e_rules'].'</div>';
+			echo '<div class="error">'.$_SESSION['e_rules'].'</div><br>';
 			unset($_SESSION['e_rules']);
 		}
 	?>
 
-	<div class="g-recaptcha" data-sitekey="6Ld1fjoUAAAAAOUBNM37lZ1ACDOipHkGWPN7vIgJ"></div><br> 
+	<div class="g-recaptcha" data-sitekey="6Ld1fjoUAAAAAOUBNM37lZ1ACDOipHkGWPN7vIgJ"></div><br><br> 
 
 	<?php
 		if (isset($_SESSION['e_bot']))
 		{
-			echo '<div class="error">'.$_SESSION['e_bot'].'</div>';
+			echo '<div class="error">'.$_SESSION['e_bot'].'</div><br>';
 			unset($_SESSION['e_bot']);
 		}
 	?>
 
-	<input type="submit" name="signUp" value="Sign Up"><br> <br>
-
+	<input type="submit" class="button" name="signUp" value="Sign Up">
 </form>
 
 <br> <br>
-<a href="../in/signIn.php">Sign in</a><br> <br> 
+<a href="../in/signIn.php" class="down">Sign in</a>
 <a href="../index.php">Go to Home!</a>
 </body>
 </html>

@@ -37,7 +37,6 @@
                     {
 
           			$_SESSION['logged']=true;
-
           			 // table with results from database
           			$_SESSION['id'] = $row['id'];
           			$_SESSION['user'] = $row['login'];
