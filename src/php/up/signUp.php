@@ -75,7 +75,7 @@
 		}
 	?>
 
-	<div class="g-recaptcha" data-sitekey="6Ld1fjoUAAAAAOUBNM37lZ1ACDOipHkGWPN7vIgJ"></div><br><br> 
+	<div class="g-recaptcha" data-sitekey="6Ld1fjoUAAAAAOUBNM37lZ1ACDOipHkGWPN7vIgJ"></div><br>
 
 	<?php
 		if (isset($_SESSION['e_bot']))

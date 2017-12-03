@@ -1,15 +1,5 @@
 <?php
 	session_start();
-
-	//add to all pages wich can be se by logged user
-	if (isset($_SESSION['logged']))
-	{
-		//photo
-	    //Here we can change picture and login of the user on all webpages in corresponding places depends on design 
-	    //So here is everything what the user can see when he is logged
-		// header('Location: in/index.php');
-		// exit();
-	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,15 +13,18 @@
 </head>
 <body>
 <!--<p>Home page</p><br><br>-->
-    <ul class="topnav">
-	  <li><a class="active" href="#home"> <img class="proPic" src="../images/Profile_pic.png" alt="R_proPic"> TeleTubbie <img class="redHand" src="../images/red_hand.png" alt="R_redHand"></a></li>
-
-<!--We need also picture of Sign out here
-<a href="signOut.php">Sign Out</a>-->
-
-	  <li><a class="active" href="in/signIn.php"> <img class="signIn" src="../images/sign_in.png" alt="R_signIn"></a></li>
-	  <li><a class="active" href="#home"> <img class="menu" src="../images/menu.png" alt="R_menu"> </a></li>
-   </ul>
+<ul class="topnav">
+<!--We need also picture of Sign out here-->
+	<?php
+    if (!isset($_SESSION['logged'])) { echo "<li><a class='active' href='#home'> <img class='proPic' src='../images/Profile_pic.png' alt='R_proPic'>";}
+    else {echo "<li><a class='active' href='#home'> <img class='proPic' src='../images/baby.png' alt='baby'>"; }//here picture of user
+    echo "TeleTubbie <img class='redHand' src='../images/red_hand.png' alt='R_redHand'></a></li>";
+	if (!isset($_SESSION['logged']))
+	  {echo "<li><a class='active' href='in/signIn.php'> <img class='signIn' src='../images/sign_in.png' alt='R_signIn'></a></li>";}
+	if (isset($_SESSION['logged'])) { echo "<li><a href='signOut.php'>Sign Out</a></li>";}//here picture of sign out
+	echo "<li><a class='active' href='#home'> <img class='menu' src='../images/menu.png' alt='R_menu'> </a></li>";
+	?>
+</ul>
 
 <div class="row">
 <!-- Search Bar -->

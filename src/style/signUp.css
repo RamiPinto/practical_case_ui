@@ -2,7 +2,7 @@ body {
   font-family:"Comic Sans MS";
   font-size: 17px;
   margin-left: 420px;
-  margin-top: 120px;
+  margin-top: 100px;
 }
 html{
   background: url("../images/Children Background Images - WallpaperSafari.jpg") no-repeat center center fixed; 
@@ -77,7 +77,7 @@ a
 {
 	text-decoration: none;
 	float: left;
-	margin: 15px;
+	margin: 10px;
 	color: #a6a6a6;
 	margin-left: 50px;
 }
