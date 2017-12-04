@@ -1,0 +1,12 @@
+install xampp before
+https://www.youtube.com/watch?v=U5ghHLRv6uc -installation of xampp 
+
+localhost/phpmyadmin/
+create database with name "cartoon_users"
+then create table by importing file "for creating table.sql"
+
+Tachan! 
+If any questions, you are welcome!
+
+https://www.youtube.com/watch?v=5QHBj4brHNM&t=451s - creating databse
+https://www.youtube.com/watch?v=jW5lrS6EUPM  - import

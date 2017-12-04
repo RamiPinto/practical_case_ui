@@ -16,12 +16,12 @@
 <ul class="topnav">
 	<?php
     if (!isset($_SESSION['logged'])) { echo "<li><a class='active' href='#home'> <img class='proPic' src='../images/Profile_pic.png' alt='R_proPic'>";}
-    else {echo "<li><a class='active' href='#home'> <img class='proPic' src='".$_SESSION['photopath']."'>"; }
-    echo "TeleTubbie <img class='redHand' src='../images/red_hand.png' alt='R_redHand'></a></li>";
+    else {echo "<li><a class='active' href='index.php'> <img class='proPic' src='".$_SESSION['photopath']."'>"; }
+    echo "<a href='index.php'>TeleTubbie</a> <img class='redHand' src='../images/red_hand.png' alt='R_redHand'></a></li>";
 	if (!isset($_SESSION['logged']))
 	  {echo "<li><a class='active' href='in/signIn.php'> <img class='signIn' src='../images/sign_in.png' alt='R_signIn'></a></li>";}
 	if (isset($_SESSION['logged'])) { echo "<li><a href='signOut.php'>Sign Out</a></li>";}//here picture of sign out
-	echo "<li><a class='active' href='#home'> <img class='menu' src='../images/menu.png' alt='R_menu'> </a></li>";
+	echo "<li><a class='active' href='index.php'> <img class='menu' src='../images/menu.png' alt='R_menu'> </a></li>";
 	?>
 </ul>
 
@@ -32,6 +32,8 @@
 <!-- Menu 1 -->
 	    <div class="col-4 col-m-12">
 	        <h2>RECOMMENDED VIDEOS</h2>
+	        <a href="play.php">play</a>
+	        <a href="playlists.php">playlists</a>
 	    </div>
 <!--we dont have search system , it will be just link to our home page for exammple. -->
 	    <form action="#">
