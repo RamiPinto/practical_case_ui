@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	require_once "../in/connect.php";
 
 	if (isset($_POST['email']))
 	{
@@ -76,8 +77,46 @@
 			$_SESSION['e_bot']="Prove that you are not a bot!";
 		}
 
+		//to check photo
+
+		if (isset($_POST['yesOrNo']))
+		{
+			$file = $_FILES['file'];
+			//print_r($file);
+			$fileName = $file['name'];
+			$fileTmpName = $file['tmp_name'];
+			$fileSize = $file['size'];
+			$fileError = $file['error'];
+
+			$fileExt = explode('.', $fileName);
+			$fileActExt = strtolower(end($fileExt));
+
+			$allowed = array('jpg', 'jpeg', 'png');
+			
+
+
+				if (!in_array($fileActExt, $allowed)) 
+				{
+					$eth_ok=false;
+					$_SESSION['e_file']="There was an error uploading your file! ";
+				}
+
+				if ($fileError === 1 )
+				{
+					$eth_ok=false;
+				    $_SESSION['e_file']="You cannot upload files of this type! Just .jpg, .jpeg, .png! ";
+				}
+
+				if ($fileSize > 1000000) 
+				{
+					$eth_ok=false;
+				    $_SESSION['e_file']="Your file is too big! ";
+				}	
+
+		}
+
 	//Try to connect with database
-		require_once "../in/connect.php";
+		
 		mysqli_report(MYSQLI_REPORT_STRICT);
 		try
 		{
@@ -89,7 +128,6 @@
 			}
 			else
 			{
-				//success
 				//If email has alreasy exist
 				$result = $connect -> query ("SELECT id FROM users WHERE login='$email'");
 				if (!$result) throw new Exception($connect->error);
@@ -103,17 +141,35 @@
 
 				if ($eth_ok==true)
 				{
-					//the fields are completed correctly
-					//echo "everything is OK";
-					if ($connect-> query("INSERT INTO users VALUES (NULL, '$nickname', '$email', '$password1_hash', 'http')"))
-					{
-						$_SESSION['success'] = true;
-						header("Location: congratulation.php");
-					}
-						else
+					if (isset($_POST['yesOrNo']))
 						{
-							throw new Exception($connect->error);
+							$status = 1; // image was uploaded by user
 						}
+
+					if ($connect-> query("INSERT INTO users VALUES (NULL, '$nickname', '$email', '$password1_hash', '')"))
+						{
+							$photoId = $connect -> query ("SELECT * FROM users WHERE login='$email'");
+							$row = mysqli_fetch_assoc($photoId);
+							$id = $row['id']; 
+							$fileNameNew = $id.".".$fileActExt;
+							$fileDestination = '../images/profile_images/'.$fileNameNew;
+							if ($status == 1)
+							{
+								//file is moved after adding to database
+								move_uploaded_file($fileTmpName, "../".$fileDestination);
+							}
+							if($status == 1) $path = $fileDestination;
+					        else $path = "../images/Profile_pic.png";
+
+					        $sqlpath = "UPDATE users SET photopath='$path' WHERE id='$id';";
+					        $resultPath = mysqli_query($connect, $sqlpath);
+							$_SESSION['success'] = true;
+							header("Location: congratulation.php");
+						}
+							else
+							{
+								throw new Exception($connect->error);
+							}
 				}
 					else 
 					{

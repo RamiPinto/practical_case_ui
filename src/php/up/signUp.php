@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="../../style/signUp.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	
 </head>
 <body>
 
@@ -24,7 +26,7 @@
 
 ?>
 
-<form action="include.php" method="post">
+<form action="include.php" method="post" enctype="multipart/form-data">
 	
 	<input type="text" name="nickname" placeholder="NICKNAME"><br>
 
@@ -66,7 +68,19 @@
 		}
 	?>
 
-	<label><input type="checkbox" class="checkbox" name="rules" checked="">I agree with rules</label>  
+	<label><input type="checkbox" class="yesOrNo" id="yesOrNo" name="yesOrNo" >Do you want upload your profile photo?</label><br>
+	<input type="file" name="file" id="file" disabled="">
+	<label for="file" id="forFile" style="opacity: 0; cursor: default;">Choose a file</label><br>
+
+	<?php
+	
+			if (isset($_SESSION['e_file']))
+			{
+				echo '<div class="error">'.$_SESSION['e_file'].'</div><br>';
+				unset($_SESSION['e_file']);
+			}
+	?>
+	<label><input type="checkbox" class="rules" id="rules" name="rules" checked="">I agree with rules</label>  
 	<?php
 		if (isset($_SESSION['e_rules']))
 		{
@@ -91,5 +105,6 @@
 <br> <br>
 <a href="../in/signIn.php" class="down">Sign in</a>
 <a href="../index.php">Go to Home!</a>
+<script type="text/javascript" src="../../script/signUp.js"></script>
 </body>
 </html>
