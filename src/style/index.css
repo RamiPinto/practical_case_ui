@@ -22,16 +22,17 @@
 ul.topnav {
     list-style-type: none;
     font-family:"Helvetica";
-    font-size:26px;
+    font-size:22px;
     font-weight: 900;
     margin: 0;
     padding-left: 20px;
     overflow: hidden;
     background-color: #00ccff;
-    position: relative;
+    position: fixed;
+    top:0px;
+    left:0px;
+    right: 0px;
     width: 100%;
-    z-index: 2;
-
 
 }
 
@@ -41,7 +42,6 @@ ul.topnav li a {
     text-align: center;
     padding: 5px 4px;
     text-decoration: none;
-    z-index: 4;
 
 }
 
@@ -133,7 +133,7 @@ input[type=search] {
 
 
 input.large, select.large{
-      width : 90%;
+    width : 90%;
     height: 30px;
     margin-top: 8px;
     margin-bottom: 40px;
@@ -151,7 +151,7 @@ input.short1 {
 }
 
 input.short2 {
-      width : 15%;
+    width : 15%;
     height: 30px;
     margin-top: 8px;
     margin-bottom: 20px;
@@ -171,7 +171,7 @@ input.short2 {
     }
 
 div{
-  padding-top: 100px;
+  padding-top: 10px;
 }
 
 h2 {
@@ -231,8 +231,8 @@ p.short3{
   color: #666666;
   border-radius: 3px;
   cursor: pointer;
-  font-size: 14px;
-  margin-right:5%;
+  font-size: 10px;
+  margin-right:15%;
   margin-bottom:5%;
 }
 
@@ -365,7 +365,8 @@ p.short3{
     .col-12 {width: 100%;}
     ul.topnav li {float: left;}
     div{
-    padding-top: 80px;
+    padding-top: 50px;
+    padding-left: 150px;
     }
 
 }

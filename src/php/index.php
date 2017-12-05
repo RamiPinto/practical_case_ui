@@ -33,24 +33,28 @@
 	<button type="submit" class="searchButton"><i class="fa fa-search"></i></button> -->
 <!-- Menu 1 -->
 	    <div class="col-12 col-m-12">
-	    	<br>
 	        <h2>RECOMMENDED VIDEOS</h2>
-	        <iframe width="240" height="192" src="https://www.youtube.com/embed/Q-W1kj4vHRk" frameborder="0" allowfullscreen></iframe>
-	        <iframe width="240" height="192" src="https://www.youtube.com/embed/ghU3y03ZYn0" frameborder="0" allowfullscreen></iframe>
-	        <iframe width="240" height="192" src="https://www.youtube.com/embed/-gwLBCoeJ14" frameborder="0" allowfullscreen></iframe>
-	        <iframe width="240" height="192" src="https://www.youtube.com/embed/wL2QbYey1Nk" frameborder="0" allowfullscreen></iframe>
-	        <iframe width="240" height="192" src="https://www.youtube.com/embed/OzbGrnw3Ofo" frameborder="0" allowfullscreen></iframe>
+	        <iframe width="180" height="128" src="https://www.youtube.com/embed/Q-W1kj4vHRk" frameborder="0" allowfullscreen></iframe>
+	        <iframe width="180" height="128" src="https://www.youtube.com/embed/ghU3y03ZYn0" frameborder="0" allowfullscreen></iframe>
+	        <iframe width="180" height="128" src="https://www.youtube.com/embed/-gwLBCoeJ14" frameborder="0" allowfullscreen></iframe>
+	        <iframe width="180" height="128" src="https://www.youtube.com/embed/wL2QbYey1Nk" frameborder="0" allowfullscreen></iframe>
+	        <iframe width="180" height="128" src="https://www.youtube.com/embed/OzbGrnw3Ofo" frameborder="0" allowfullscreen></iframe>
 
 
 	        <!--<a href="play.php">play</a>
 	        <a href="playlists.php">playlists</a>-->
 	    </div>
-	    <br><br>
+	    
 <!--we dont have search system , it will be just link to our home page for exammple. -->
 	   
 <!-- Menu 2 -->
 	    <div class="col-12 col-m-12">
 	       <h2>MOVIES</h2>
+	       <iframe width="180" height="240" src="https://www.youtube.com/embed/pX9irV_3C4o" frameborder="0" allowfullscreen></iframe>
+	       <iframe width="180" height="240" src="https://www.youtube.com/embed/gNXOSyZG04I" frameborder="0" allowfullscreen></iframe>
+	       <iframe width="180" height="240" src="https://www.youtube.com/embed/miVpeR6lrLg" frameborder="0" allowfullscreen></iframe>
+	       <iframe width="180" height="240" src="https://www.youtube.com/embed/BT0V3EoQCgA" frameborder="0" allowfullscreen></iframe>
+	       <iframe width="180" height="240" src="https://www.youtube.com/embed/QvYXpIURigc" frameborder="0" allowfullscreen></iframe>
 	    </div>
 
 <!-- What this form is for? -->
@@ -60,11 +64,9 @@
 
   <!-- Footer -->
     <div class="footer">
-      <br>
         <p class="l"><a class="link" href="#news">Copyright</a></p><p class="l">|</p>
         <p class="l"><a class="link" href="#news">About Us</a></p><p class="l">|</p>
         <p class="l"><a class="link" href="#news">Contact</a></p>
-        <br>
     </div>
 </body>
 </html>
