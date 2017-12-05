@@ -31,33 +31,22 @@
 	<button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
 <!-- Menu 1 -->
 	    <div class="col-4 col-m-12">
+	    	<br>
 	        <h2>RECOMMENDED VIDEOS</h2>
 	        <a href="play.php">play</a>
 	        <a href="playlists.php">playlists</a>
 	    </div>
+	    <br>
 <!--we dont have search system , it will be just link to our home page for exammple. -->
-	    <form action="#">
-		    <div class="col-6 col-m-12">   
-		    </div>
-		    <div class="col-6 col-m-12">
-		    </div>
-	   </form>
-<hr>
+	   
 <!-- Menu 2 -->
-	    <div class="col-6 col-m-12">
+	    <div class="col-4 col-m-12">
 	       <h2>MOVIES</h2>
 	    </div>
 
 <!-- What this form is for? -->
-    <form action="#">
-    <div class="col-6 col-m-12">
-       <p> </p>
-       <br><br><br><br><br><br><br><br>
+    
 
-    </div>
-    </form>
-
-<hr>
 </div>
 
   <!-- Footer -->
