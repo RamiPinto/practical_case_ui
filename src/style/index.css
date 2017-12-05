@@ -28,7 +28,7 @@ ul.topnav {
     padding-left: 20px;
     overflow: hidden;
     background-color: #00ccff;
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 2;
 
@@ -54,7 +54,7 @@ ul.topnav li a {
 
 /*Body*/
 body {
-  margin: 0;
+  margin:0;
 }
 
 html{
@@ -186,7 +186,8 @@ h2 {
 
 
 p.l {
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
   font-family:"Helvetica";
   font-size:10px;
   display: inline;
@@ -265,13 +266,18 @@ p.short3{
 
 /*Footer*/
 .footer {
+    position:fixed;
     list-style-type: none;
     background-color: #333;
     color: #ffffff;
     text-align: center;
     font-size: 18px;
-    padding: 38px;
+    padding: 20px;
     z-index: -2;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
 
 }
 
