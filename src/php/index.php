@@ -28,9 +28,13 @@
 </ul>
 
 <div class="row">
-<!-- Search Bar 
+<!-- Search Bar -->
 	<input type="search" name="search" placeholder="LET'S EXPLORE! ">
-	<button type="submit" class="searchButton"><i class="fa fa-search"></i></button> -->
+	<?php
+    if (!isset($_SESSION['logged']))
+	echo "<button type='submit' class='searchButton'><i class='fa fa-search'></i></button>"; //link to anything
+    else echo "<button type='submit' class='searchButton'><i class='fa fa-search'></i></button>"; //link to sign in
+    ?>
 <!-- Menu 1 -->
 	    <div class="col-12 col-m-12">
 	        <h2>RECOMMENDED VIDEOS</h2>
@@ -41,11 +45,9 @@
 	        <iframe width="180" height="128" src="https://www.youtube.com/embed/OzbGrnw3Ofo" frameborder="0" allowfullscreen></iframe>
 
 
-	        <!--<a href="play.php">play</a>
-	        <a href="playlists.php">playlists</a>-->
+	        <a href="play.php">play</a>
+	        <a href="playlists.php">playlists</a>
 	    </div>
-	    
-<!--we dont have search system , it will be just link to our home page for exammple. -->
 	   
 <!-- Menu 2 -->
 	    <div class="col-12 col-m-12">
@@ -56,10 +58,6 @@
 	       <iframe width="180" height="240" src="https://www.youtube.com/embed/BT0V3EoQCgA" frameborder="0" allowfullscreen></iframe>
 	       <iframe width="180" height="240" src="https://www.youtube.com/embed/QvYXpIURigc" frameborder="0" allowfullscreen></iframe>
 	    </div>
-
-<!-- What this form is for? -->
-    
-
 </div>
 
   <!-- Footer -->

@@ -1,28 +1,134 @@
-* {
-    box-sizing: border-box;
+
+/*Body*/
+body {
+  margin:0;
 }
 
-.row::after {
-    content: "";
-    clear: both;
+html{
+  background: url("../images/Children Background Images - WallpaperSafari.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+div{
+  padding-top: 10px;
 }
 
- [class*="col-"] {
-
+h2 {
+    color: black;
+  font-family:"Comic Sans MS";
+  font-size:30px;
+  font-weight: 900;
 }
 
 
-/*Responsive Design*/
+p.l {
+  text-align: center;
+  padding: 20px;
+  font-family:"Helvetica";
+  font-size:10px;
+  display: inline;
+
+}
+p.t{
+  font-family:"Helvetica";
+  font-size: 40px;
+  font-weight: bold;
+  position:relative;
+  bottom:-10;
+  display: inline;
+}
+
+p.short1 {
+  float: left;
+  width: 46%;
+  margin:-5px;
+  display: inline;
+}
+
+p.short2{
+  float:left;
+  width: 15%;
+  margin:-5px;
+  display: inline;
+}
+
+p.short3{
+  float:left;
+  width:31%;
+  margin:-5px;
+  display: inline;
+}
+
+/*Footer*/
+.footer {
+    position:fixed;
+    list-style-type: none;
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    z-index: -2;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+/*Social media icons*/
+
+.fa {
+  padding-top: 10px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+/*Responsive........................*/
 
 /* For mobile phones: */
 @media only screen and (max-width: 600px) {
 [class*="col-"] {
     width: 100%;
     }
+    ul.topnav li {float: none;}
+    div{
+    padding-top: 280px;
+    }
 }
-
-/* For tablets: */
 @media only screen and (max-width: 768px) and (min-width:600px) {
+    /* For tablets: */
     .col-m-1 {width: 8.33%;}
     .col-m-2 {width: 16.66%;}
     .col-m-3 {width: 25%;}
@@ -35,10 +141,16 @@
     .col-m-10 {width: 83.33%;}
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;}
-}
+    ul.topnav li  {float: none;}
+    ul.topnav li a.option {float: left;}
+    div{
+    padding-top: 130px;
+    }
 
-/* For desktop: */
+
+}
 @media only screen and (min-width: 768px) {
+    /* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -51,4 +163,128 @@
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+    ul.topnav li {float: left;}
+    div{
+    padding-top: 50px;
+    padding-left: 150px;
+    }
+
+}
+
+/*modal box*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 80%; 
+    height: auto; 
+   
+}
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 0;
+    border: 3px solid #543314;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    text-align: center;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 20px;
+    font-family:"Comic Sans MS";
+
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+input {
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: 2px solid #4CAF50;
+    text-align: left;
+    color: #a6a6a6;
+    font-family:"Comic Sans MS";
+    color: black;
+    padding-left: 10px;
+}
+#title
+{
+    padding: 10px;
+    width:300px;
+    height: 20px;
+}
+
+.button
+{
+    float: right;
+    position: relative;
+    width : 100px;
+    height: 30px;
+    margin-right: 380px;
+    margin-top: 15px;
+    background-color: white;
+    text-align: center;
+    font-family:"Comic Sans MS";
+    color: black;
+    cursor: pointer;
+    
+}
+.button:hover
+{
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #a6a6a6;
+
+}
+.modal-header {
+    padding: 2px 16px;
+    background-color: #97d3ec;
+    color: #f2f2f2;
+    text-align: center;
+    font-family:"Comic Sans MS";
+    font-size: 22px;
+}
+
+.modal-body {padding: 2px 16px;  font-family:"Comic Sans MS";}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*end of modal box*/
+
+#result
+{
+  float: left;
+  margin-left: 100px;
+}
+.error-message
+{
+  color: red;
+}
+.success-message{
+  color: #4CAF50;
+}
+span{
+  cursor: pointer;
+}
+span:hover {
+  color: yellow;
 }

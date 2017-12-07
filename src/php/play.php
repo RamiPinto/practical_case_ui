@@ -27,9 +27,13 @@
 <div class="row">
 <!-- Search Bar -->
 	<input type="search" name="search" placeholder="LET'S EXPLORE! ">
-	<button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
-
+	<?php
+    if (!isset($_SESSION['logged']))
+	echo "<button type='submit' class='searchButton'><i class='fa fa-search'></i></button>"; //link to anything
+    else echo "<button type='submit' class='searchButton'><i class='fa fa-search'></i></button>"; //link to sign in
+    ?>
 <!--here everything inside play page-->
+
 
 
 </div>

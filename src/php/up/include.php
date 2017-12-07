@@ -13,13 +13,13 @@
 		if ((strlen($nickname)<3) || (strlen($nickname)>15))
 		{
 			$eth_ok = false;
-			$_SESSION['e_nickname']="Nickname have to include from 3 to 15 signs";
+			$_SESSION['e_nickname']="Nickname has to include from 3 to 15 signs";
 		}
 
 		if (ctype_alnum($nickname) == false)
 		{
 			$eth_ok = false;
-			$_SESSION['e_nickname']="Nickname have to include only numbers or letters"; 
+			$_SESSION['e_nickname']="Nickname has to include only numbers or letters"; 
 		}
 
 		// Check login = email
@@ -43,7 +43,7 @@
 		if ((strlen($password1)<8) || (strlen($password1)>20))
 		{
 			$eth_ok=false;
-			$_SESSION['e_password']="Password have to include from 8 to 20 signs";
+			$_SESSION['e_password']="Password has to include from 8 to 20 signs";
 		}
 
 		if ($password1!=$password2)
