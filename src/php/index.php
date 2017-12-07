@@ -10,7 +10,9 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../style/index.css">
+	<script src="../script/index.js"></script>
 </head>
+
 <body>
 <!--<p>Home page</p><br><br>-->
 <ul class="topnav">
@@ -34,27 +36,37 @@
 <!-- Menu 1 -->
 	    <div class="col-12 col-m-12">
 	        <h2>RECOMMENDED VIDEOS</h2>
-	        <iframe width="180" height="128" src="https://www.youtube.com/embed/Q-W1kj4vHRk" frameborder="0" allowfullscreen></iframe>
-	        <iframe width="180" height="128" src="https://www.youtube.com/embed/ghU3y03ZYn0" frameborder="0" allowfullscreen></iframe>
-	        <iframe width="180" height="128" src="https://www.youtube.com/embed/-gwLBCoeJ14" frameborder="0" allowfullscreen></iframe>
-	        <iframe width="180" height="128" src="https://www.youtube.com/embed/wL2QbYey1Nk" frameborder="0" allowfullscreen></iframe>
-	        <iframe width="180" height="128" src="https://www.youtube.com/embed/OzbGrnw3Ofo" frameborder="0" allowfullscreen></iframe>
+	        <a href="play.php"><img class='videoThumbnail' id="spongebobCartoon" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
+	        <a href="play.php"><img class='videoThumbnail' id="powerrangerCartoon" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
+	        <a href="play.php"><img class='videoThumbnail' id="bobthebuilderCartoon" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
+	        <a href="play.php"><img class='videoThumbnail' id="tomandjerryCartoon" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
+	        <a href="play.php"><img class='videoThumbnail' id="thomasthetrainCartoon" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
+	        <!--<iframe width="180" height="128" src="https://www.youtube.com/embed/Q-W1kj4vHRk" frameborder="0" allowfullscreen></iframe>-->
+	        <!--<iframe width="180" height="128" src="https://www.youtube.com/embed/ghU3y03ZYn0" frameborder="0" allowfullscreen></iframe>-->
+	        <!--<iframe width="180" height="128" src="https://www.youtube.com/embed/-gwLBCoeJ14" frameborder="0" allowfullscreen></iframe>-->
+	        <!--<iframe width="180" height="128" src="https://www.youtube.com/embed/wL2QbYey1Nk" frameborder="0" allowfullscreen></iframe>-->
+	        <!--<iframe width="180" height="128" src="https://www.youtube.com/embed/OzbGrnw3Ofo" frameborder="0" allowfullscreen></iframe>-->
 
 
 	        <!--<a href="play.php">play</a>
 	        <a href="playlists.php">playlists</a>-->
 	    </div>
 	    
-<!--we dont have search system , it will be just link to our home page for exammple. -->
+<!--we dont have search system , it will be just link to our home page for example. -->
 	   
 <!-- Menu 2 -->
 	    <div class="col-12 col-m-12">
 	       <h2>MOVIES</h2>
-	       <iframe width="180" height="240" src="https://www.youtube.com/embed/pX9irV_3C4o" frameborder="0" allowfullscreen></iframe>
+	       <a href="play.php"><img class='videoThumbnail' id="bobthebuilderMovie" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
+	       <a href="play.php"><img class='videoThumbnail' id="rudolphreindeerMovie" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
+	       <a href="play.php"><img class='videoThumbnail' id="frostysnowmanMovie" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
+	       <a href="play.php"><img class='videoThumbnail' id="babestoylandMovie" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
+	       <a href="play.php"><img class='videoThumbnail' id="casperghostMovie" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
+	       <!-- <iframe width="180" height="240" src="https://www.youtube.com/embed/pX9irV_3C4o" frameborder="0" allowfullscreen></iframe>
 	       <iframe width="180" height="240" src="https://www.youtube.com/embed/gNXOSyZG04I" frameborder="0" allowfullscreen></iframe>
 	       <iframe width="180" height="240" src="https://www.youtube.com/embed/miVpeR6lrLg" frameborder="0" allowfullscreen></iframe>
 	       <iframe width="180" height="240" src="https://www.youtube.com/embed/BT0V3EoQCgA" frameborder="0" allowfullscreen></iframe>
-	       <iframe width="180" height="240" src="https://www.youtube.com/embed/QvYXpIURigc" frameborder="0" allowfullscreen></iframe>
+	       <iframe width="180" height="240" src="https://www.youtube.com/embed/QvYXpIURigc" frameborder="0" allowfullscreen></iframe> -->
 	    </div>
 
 <!-- What this form is for? -->
@@ -63,10 +75,10 @@
 </div>
 
   <!-- Footer -->
-    <div class="footer">
+   <!--  <div class="footer">
         <p class="l"><a class="link" href="#news">Copyright</a></p><p class="l">|</p>
         <p class="l"><a class="link" href="#news">About Us</a></p><p class="l">|</p>
         <p class="l"><a class="link" href="#news">Contact</a></p>
-    </div>
+    </div> -->
 </body>
 </html>
