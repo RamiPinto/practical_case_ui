@@ -21,6 +21,7 @@ $(document).ready(function(){
       $("#boy1").click(function(){
         if(action==1){
             $("#home").css("visibility","visible");
+            $(this).animate({'opacity':1});
             action = 2;
         }
         else{
@@ -33,6 +34,60 @@ $(document).ready(function(){
       $("#boy1").mouseout(function(){
         if ($(this).css('opacity') == '1'){
             $("#home").css("visibility","hidden");
+            $(this).animate({'opacity':0.5});
+
+          }
+      });
+
+      $("#boy2").mouseover(function(){
+        if ($(this).css('opacity') != '1'){
+            $(this).animate({'opacity':1});
+          }
+      });
+      var action = 1;
+      $("#boy2").click(function(){
+        if(action==1){
+            $("#help").css("visibility","visible");
+            $(this).animate({'opacity':1});
+            action = 2;
+        }
+        else{
+          $("#help").css("visibility","hidden");
+          $(this).animate({'opacity':0.5});
+          action=1;
+        }
+      });
+
+      $("#boy2").mouseout(function(){
+        if ($(this).css('opacity') == '1'){
+            $("#help").css("visibility","hidden");
+            $(this).animate({'opacity':0.5});
+
+          }
+      });
+
+      $("#girl").mouseover(function(){
+        if ($(this).css('opacity') != '1'){
+            $(this).animate({'opacity':1});
+          }
+      });
+      var action = 1;
+      $("#girl").click(function(){
+        if(action==1){
+            $("#list").css("visibility","visible");
+            $(this).animate({'opacity':1});
+            action = 2;
+        }
+        else{
+          $("#list").css("visibility","hidden");
+          $(this).animate({'opacity':0.5});
+          action=1;
+        }
+      });
+
+      $("#girl").mouseout(function(){
+        if ($(this).css('opacity') == '1'){
+            $("#list").css("visibility","hidden");
             $(this).animate({'opacity':0.5});
 
           }
