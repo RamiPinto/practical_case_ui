@@ -182,7 +182,18 @@ visibility: hidden;
   margin-left: 10%;
   margin-right: 10%;
   color: #000033;
+}
 
+.video {
+  padding:10px;
+  display: inline-block;
+  opacity: 1.0;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.video:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
 }
 
 
