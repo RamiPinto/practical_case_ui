@@ -21,14 +21,12 @@
 <body>
 
 <!--Also this page inform user that he/she is logged now , so we need use here a template of design  -->
-
 <?php
 
 echo "<p style='font-size:25px'>Congratulations! You are logged to the system</p>";
 //echo "Your email: ".$_SESSION['user']."<br>";
 //echo "Your photo path: ".$_SESSION['photopath']."<br><br>";
 ?>
-<!--We can add it also everywhere we want-->
 <a href="../signOut.php" style="margin-left: 130px">Sign Out</a>
 <a href="../index.php">Go to Home!</a>
 </body>

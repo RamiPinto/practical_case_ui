@@ -1,5 +1,8 @@
 <?php
-	session_start();
+	  session_start();
+	  date_default_timezone_set('Europe/Madrid');
+	  include 'php/commentForm.php';
+	  require_once 'php/connect.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +12,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../style/index.css">
+	<link rel="stylesheet" href="../style/play_video.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 <body>
 <ul class="topnav">
@@ -34,17 +38,38 @@
     ?>
 <!--here everything inside play page-->
 
+<div id="playContent">
+	
+<div id="mainVideo">
+	<div id="video">
+		
+	</div>
+	<div id="informVideo">
+		
+	</div>
+	<div id="comments">
+		<?php  
+            echo "<form method='post' action='php/setComment.php' id='form-set'>
+                  <input type='hidden' name='nickname' id='nickname' value='nicknameuser'> 
+                  <input type='hidden' name='date' id='date' value='".date('Y-m-d H:i:s')."'>
+                  <input type='hidden' name='idVideo' id='idVideo' value='idVideo'>
+                  <textarea name='message' id='commentMessage' placeholder='Write a comment...'></textarea><br><br>
+                  <button class='button' id='commentButton' type='submit' name='commentSubmit'>Comment</button>
+                  <p id='form-message'> </p>
+                  </form>";
+            echo "<div class='box' id='box'></div>";
+            echo "<button class='btn_more' id='btn_more'>More comments</button>";
+            ?>
+	</div>
 
+<div id="videoRandom">
+	
 
 </div>
 
-  <!-- Footer -->
-    <div class="footer">
-      <br>
-        <p class="l"><a class="link" href="#news">Copyright</a></p><p class="l">|</p>
-        <p class="l"><a class="link" href="#news">About Us</a></p><p class="l">|</p>
-        <p class="l"><a class="link" href="#news">Contact</a></p>
-        <br>
-    </div>
+
+</div>
+</div>
+    <script type="text/javascript" src="../script/play_video.js"></script>
 </body>
 </html>

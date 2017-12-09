@@ -152,14 +152,14 @@
 							$row = mysqli_fetch_assoc($photoId);
 							$id = $row['id']; 
 							$fileNameNew = $id.".".$fileActExt;
-							$fileDestination = '../images/profile_images/'.$fileNameNew;
+							$fileDestination = '../img/profile_images/'.$fileNameNew;
 							if ($status == 1)
 							{
 								//file is moved after adding to database
 								move_uploaded_file($fileTmpName, "../".$fileDestination);
 							}
 							if($status == 1) $path = $fileDestination;
-					        else $path = "../images/Profile_pic.png";
+					        else $path = "../img/profile_pic.png";
 
 					        $sqlpath = "UPDATE users SET photopath='$path' WHERE id='$id';";
 					        $resultPath = mysqli_query($connect, $sqlpath);

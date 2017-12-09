@@ -3,80 +3,90 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head>
 	<title>Cartoons-HOME</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../style/index.css">
-	<script src="../script/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-
 <body>
-<!--<p>Home page</p><br><br>-->
-<ul class="topnav">
-	<?php
-    if (!isset($_SESSION['logged'])) { echo "<li><a class='active' href='#home'> <img class='proPic' src='../images/Profile_pic.png' alt='R_proPic'>";}
-    else {echo "<li><a class='active' href='index.php'> <img class='proPic' src='".$_SESSION['photopath']."'>"; }
-    echo "<li><a href='index.php'>TeleTubbie</a></li> <a><li><img class='redHand' src='../images/red_hand.png' alt='R_redHand'></a></li>";
-    echo "<li><a><input type='search' name='search' placeholder='LET\\'S EXPLORE! '></a></li>";
-	echo "<li><a><button type='submit' class='searchButton'><i class='fa fa-search'></i></button></a></li>";
+<!-- Navigation bar -->
+    <ul>
+      <?php
+    if (!isset($_SESSION['logged'])) 
+    	 { echo "<img class='nav' id='profile' src='../img/profile_pic.png'>";}
+    else { echo "<img class='nav' id='profile' src='".$_SESSION['photopath']."'>"; }
+
+		echo "<a href='index.php'><img class='nav' id='logo' src='../img/logo.png'></a>";
+		echo "<img class='nav' id='menu' src='../img/options.png'>";
+	    	  
 	if (!isset($_SESSION['logged']))
-	  {echo "<li><a class='active' href='in/signIn.php'> <img class='signIn' src='../images/sign_in.png' alt='R_signIn'></a></li>";}
-	if (isset($_SESSION['logged'])) { echo "<li><a href='signOut.php'>Sign Out</a></li>";}//here picture of sign out
-	echo "<li><a class='active' href='index.php'> <img class='menu' src='../images/menu.png' alt='R_menu'> </a></li>";
+	     { echo "<a href='in/signIn.php'><img class='nav' id='login' src='../img/login.png'></a>";}
+
+	else { echo "<a href='signOut.php'><img class='nav' id='login' src='../img/signout.png'></a>";}
+	    
+	    
 	?>
-</ul>
+    </ul>
 
-<div class="row">
-<!-- Search Bar -->
-	<input type="search" name="search" placeholder="LET'S EXPLORE! ">
-	<?php
-    if (!isset($_SESSION['logged']))
-	echo "<button type='submit' class='searchButton'><i class='fa fa-search'></i></button>"; //link to anything
-    else echo "<button type='submit' class='searchButton'><i class='fa fa-search'></i></button>"; //link to sign in
+  <!-- Menu -->
+  <div class="menu">
+  <form>
+    <button class="option" id="home" formaction="index.php"><i class="fa fa-home"></i> HOME</button><br>
+    <?php
+		if (isset($_SESSION['logged']))
+	    echo "<button class='option' id= 'list' formaction='playlists.php'><i class='fa fa-list-alt'></i> MY PLAYLISTS</button><br>";
+	    else echo "<button class='option' id= 'list' formaction='in/signIn.php'><i class='fa fa-list-alt'></i> MY PLAYLISTS</button><br>";
     ?>
-<!-- Menu 1 -->
-	    <div class="col-12 col-m-12">
-	        <h2>RECOMMENDED VIDEOS</h2>
-	        <a href="play.php"><img class='videoThumbnail' id="spongebobCartoon" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
-	        <a href="play.php"><img class='videoThumbnail' id="powerrangerCartoon" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
-	        <a href="play.php"><img class='videoThumbnail' id="bobthebuilderCartoon" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
-	        <a href="play.php"><img class='videoThumbnail' id="tomandjerryCartoon" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
-	        <a href="play.php"><img class='videoThumbnail' id="thomasthetrainCartoon" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
-	        <!--<iframe width="180" height="128" src="https://www.youtube.com/embed/Q-W1kj4vHRk" frameborder="0" allowfullscreen></iframe>-->
-	        <!--<iframe width="180" height="128" src="https://www.youtube.com/embed/ghU3y03ZYn0" frameborder="0" allowfullscreen></iframe>-->
-	        <!--<iframe width="180" height="128" src="https://www.youtube.com/embed/-gwLBCoeJ14" frameborder="0" allowfullscreen></iframe>-->
-	        <!--<iframe width="180" height="128" src="https://www.youtube.com/embed/wL2QbYey1Nk" frameborder="0" allowfullscreen></iframe>-->
-	        <!--<iframe width="180" height="128" src="https://www.youtube.com/embed/OzbGrnw3Ofo" frameborder="0" allowfullscreen></iframe>-->
-
-
-	        <a href="play.php">play</a>
-	        <a href="playlists.php">playlists</a>
-	    </div>
-	   
-<!-- Menu 2 -->
-	    <div class="col-12 col-m-12">
-	       <h2>MOVIES</h2>
-	       <a href="play.php"><img class='videoThumbnail' id="bobthebuilderMovie" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
-	       <a href="play.php"><img class='videoThumbnail' id="rudolphreindeerMovie" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
-	       <a href="play.php"><img class='videoThumbnail' id="frostysnowmanMovie" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
-	       <a href="play.php"><img class='videoThumbnail' id="babestoylandMovie" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
-	       <a href="play.php"><img class='videoThumbnail' id="casperghostMovie" src='../images/spongebobSquarepants.webp' alt='R_vidThumbnail'></a>
-	       <!-- <iframe width="180" height="240" src="https://www.youtube.com/embed/pX9irV_3C4o" frameborder="0" allowfullscreen></iframe>
-	       <iframe width="180" height="240" src="https://www.youtube.com/embed/gNXOSyZG04I" frameborder="0" allowfullscreen></iframe>
-	       <iframe width="180" height="240" src="https://www.youtube.com/embed/miVpeR6lrLg" frameborder="0" allowfullscreen></iframe>
-	       <iframe width="180" height="240" src="https://www.youtube.com/embed/BT0V3EoQCgA" frameborder="0" allowfullscreen></iframe>
-	       <iframe width="180" height="240" src="https://www.youtube.com/embed/QvYXpIURigc" frameborder="0" allowfullscreen></iframe> -->
-	    </div>
+    <button class="option" id="help" formaction="https://support.google.com/?hl=es"><i class="fa fa-question-circle"></i> HELP</button>
+  </form>
 </div>
 
+  <div class="menu">
+    <img class="person" id="boy1" src="../img/boy1.png"><br>
+    <img class="person" id="girl" src="../img/girl.png"><br>
+    <img class="person" id="boy2" src="../img/boy2.png">
+  </div>
+
+
+    <div class="row">
+      <br>
+  <!--Search engine -->
+  <div class="search-container">
+   <form action="index.php">
+     <input type="text" placeholder="LET'S EXPLORE!" name="search">
+     <button type="submit"><i class="fa fa-search"></i></button>
+   </form>
+ </div>
+
+<!--Playlists -->
+<div class="playlists">
+  <h1>Recommended Videos</h1>
+       <!-- <iframe width="180" height="128" src="https://www.youtube.com/embed/pX9irV_3C4o" frameborder="0" allowfullscreen></iframe> -->
+ <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+
+  <h1>Movies</h1>
+ <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+
+  <h1>TV Series</h1>
+  <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+
+  <h1>Trending</h1>
+  <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+
+</div>
+
+    </div>
+
   <!-- Footer -->
-   <!--  <div class="footer">
-        <p class="l"><a class="link" href="#news">Copyright</a></p><p class="l">|</p>
-        <p class="l"><a class="link" href="#news">About Us</a></p><p class="l">|</p>
-        <p class="l"><a class="link" href="#news">Contact</a></p>
-    </div> -->
+    <div class="footer col-12 col-m-12">
+      <br>
+        <p><a class="link" href="index.html">FAQs</a> &emsp; | &emsp; <a class="link" href="index.html">About Us</a> &emsp; | &emsp; <a class="link" href="index.html">Contact</a></p>
+    </div>
+<script src="../script/index.js"></script>
 </body>
 </html>

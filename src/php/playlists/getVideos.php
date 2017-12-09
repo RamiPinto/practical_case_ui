@@ -18,7 +18,7 @@
 				{
 
 				    while($row2 = $result2->fetch_assoc()) {
-				        echo "<iframe width='180' height='128' src='".$row2["path"]."' frameborder='0' allowfullscreen></iframe><br>";
+				        echo "<iframe width='180' height='128' src='".$row2["path"]."' frameborder='0' allowfullscreen></iframe>";
 				    }
 				}  
 	    }
