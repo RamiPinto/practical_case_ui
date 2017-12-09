@@ -105,8 +105,9 @@ input[type=text]{
   background: #DB8400;
 }
 
-.fa-search{
+.fa {
   font-size: 20px;
+  color: #000033;
 }
 
 
@@ -118,13 +119,14 @@ input[type=text]{
   margin-top: 110px;
   z-index: 3;
   float:right;
+  height:100%;
 }
 
 img.person {
     float: right;
     opacity: 0.5;
     filter: alpha(opacity=50); /* For IE8 and earlier */
-    height: 220px;
+    height:30%;
     margin-top: -10px;
 }
 
@@ -141,11 +143,11 @@ img.person:hover {
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 18px;
   font-weight: bold;
-  width: 268px;
-  height: 104px;
+  width: 15vw;
+  height: 15vh;
   z-index: 4;
-  margin-right:130px;
-  margin-top:90px;
+  margin-right:8vw;
+  margin-top:11vh;
 
 }
 
@@ -161,9 +163,16 @@ visibility: hidden;
   visibility: hidden;
 }
 
+.fa-home {
+  font-size: 40px;
+}
 
-.fa {
-  color:#000033;
+.fa-list-alt {
+  font-size: 40px;
+}
+
+.fa-question-circle {
+  font-size: 40px;
 }
 
 /*Playlists*/

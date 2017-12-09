@@ -6,7 +6,7 @@ $(document).ready(function(){
 
         if($('.menu').offset().top + $('.menu').height()
                                                >= $('.footer').offset().top - 0){
-            $('.menu').css('bottom', '170px');
+            $('.menu').css('bottom', '10%');
 
           }
         if($(document).scrollTop() + window.innerHeight < $('.footer').offset().top)
