@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+  //Avoid hide guys by footer when scrollin
     $(window).scroll(function checkOffset() {
 
         if($('.menu').offset().top + $('.menu').height()
@@ -11,7 +13,7 @@ $(document).ready(function(){
             $('.menu').css('bottom', 'auto'); // restore when you scroll up
     });
 
-
+    //Menu animations
       $("#boy1").mouseover(function(){
         if ($(this).css('opacity') != '1'){
             $(this).animate({'opacity':1});
@@ -96,17 +98,27 @@ $(document).ready(function(){
   $("#menu").click(function(){
     if ($(".person").css('opacity') == '1'){
         $(".person").animate({'opacity':0.5})
-        $("#home").css("visibility","hidden");
-        $("#list").css("visibility","hidden");
-        $("#help").css("visibility","hidden");
+        $(".option").css("visibility","hidden");
       }
       else{
         $(".person").animate({'opacity':1})
-        $("#home").css("visibility","visible");
-        $("#list").css("visibility","visible");
-        $("#help").css("visibility","visible");}
+        $(".option").css("visibility","visible");
+      }
   });
 
 
+  //Search bar hide when stopping mouse movement
+  var timeout = null
+$(document).on('mousemove', function() {
+  if (timeout !== null) {
+     $('.search-container').show();
+      clearTimeout(timeout);
+  }
 
+  timeout = setTimeout(function() {
+       $('.search-container').hide();
+       $(".person").animate({'opacity':0.5});
+      $(".option").css("visibility","hidden");
+  }, 6000);
+});
 });
