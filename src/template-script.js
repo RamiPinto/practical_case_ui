@@ -35,10 +35,11 @@ $(document).ready(function(){
 
       $("#boy1").mouseout(function(){
         if ($(this).css('opacity') == '1'){
-            $("#home").css("visibility","hidden");
             $(this).animate({'opacity':0.5});
-
-          }
+            setTimeout(function () {
+              $("#home").css("visibility","hidden");
+        },2500);
+        }
       });
 
       $("#boy2").mouseover(function(){
@@ -62,10 +63,11 @@ $(document).ready(function(){
 
       $("#boy2").mouseout(function(){
         if ($(this).css('opacity') == '1'){
-            $("#help").css("visibility","hidden");
             $(this).animate({'opacity':0.5});
-
-          }
+            setTimeout(function () {
+              $("#help").css("visibility","hidden");
+        },2500);
+        }
       });
 
       $("#girl").mouseover(function(){
@@ -89,9 +91,10 @@ $(document).ready(function(){
 
       $("#girl").mouseout(function(){
         if ($(this).css('opacity') == '1'){
-            $("#list").css("visibility","hidden");
             $(this).animate({'opacity':0.5});
-
+            setTimeout(function () {
+              $("#list").css("visibility","hidden");
+        },2500);
           }
       });
 
