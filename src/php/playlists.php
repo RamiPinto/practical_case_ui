@@ -8,40 +8,19 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head>
 	<title>Cartoons-PLAYLISTS</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../style/playlists.css">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-<!-- <ul class="topnav">
-	<?php
- //    if (!isset($_SESSION['logged'])) { echo "<li><a class='active' href='#home'> <img class='proPic' src='../images/Profile_pic.png' alt='R_proPic'>";}
- //    else {echo "<li><a class='active' href='index.php'> <img class='proPic' src='".$_SESSION['photopath']."'>"; }
- //    echo "<a href='index.php'>TeleTubbie</a> <img class='redHand' src='../images/red_hand.png' alt='R_redHand'></a></li>";
-	// if (!isset($_SESSION['logged']))
-	//   {echo "<li><a class='active' href='in/signIn.php'> <img class='signIn' src='../images/sign_in.png' alt='R_signIn'></a></li>";}
-	// if (isset($_SESSION['logged'])) { echo "<li><a href='signOut.php'>Sign Out</a></li>";}//here picture of sign out
-	// echo "<li><a class='active' href='index.php'> <img class='menu' src='../images/menu.png' alt='R_menu'> </a></li>";
-	?>
-</ul> -->
-<!-- <div class="row">
-
-	<input type="search" name="search" placeholder="LET'S EXPLORE! ">
-	<?php
- //    if (!isset($_SESSION['logged']))
-	// echo "<button type='submit' class='searchButton'><i class='fa fa-search'></i></button>"; //link to anything
- //    else echo "<button type='submit' class='searchButton'><i class='fa fa-search'></i></button>"; //link to sign in
-    ?>
-</div> -->
-
-<!--here everything inside playlists page-->
-
-<div id="myModal" class="modal">
+  <!-- Modal Box -->
+	<div id="myModal" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
@@ -66,37 +45,82 @@
   </div>
 </div>
 
-<img src='../images/plus.png' id='addPlaylist'> Create playlist
+<!-- Navigation bar -->
+    <ul>
+      <?php
+    if (!isset($_SESSION['logged'])) 
+    	 { echo "<img class='nav' id='profile' src='../img/profile_pic.png'>";}
+    else { echo "<img class='nav' id='profile' src='".$_SESSION['photopath']."'>"; }
+
+		echo "<a href='index.php'><img class='nav' id='logo' src='../img/logo.png'></a>";
+		echo "<img class='nav' id='menu' src='../img/options.png'>";
+	    	  
+	if (!isset($_SESSION['logged']))
+	     { echo "<a href='in/signIn.php'><img class='nav' id='login' src='../img/login.png'></a>";}
+
+	else { echo "<a href='signOut.php'><img class='nav' id='login' src='../img/signout.png'></a>";}
+ 
+	?>
+    </ul>
+
+  <!-- Menu -->
+  <div class="menu">
+  <form>
+    <button class="option" id="home" formaction="index.php"><i class="fa fa-home"></i> HOME</button><br>
+    <?php
+		if (isset($_SESSION['logged']))
+	    echo "<button class='option' id= 'list' formaction='playlists.php'><i class='fa fa-list-alt'></i> MY PLAYLISTS</button><br>";
+	    else echo "<button class='option' id= 'list' formaction='in/signIn.php'><i class='fa fa-list-alt'></i> MY PLAYLISTS</button><br>";
+    ?>
+    <button class="option" id="help" formaction="https://support.google.com/?hl=es"><i class="fa fa-question-circle"></i> HELP</button>
+  </form>
+</div>
+
+  <div class="menu">
+    <img class="person" id="boy1" src="../img/boy1.png"><br>
+    <img class="person" id="girl" src="../img/girl.png"><br>
+    <img class="person" id="boy2" src="../img/boy2.png">
+  </div>
+
+
+    <div class="row">
+      <br>
+  <!--Search engine -->
+  <div class="search-container">
+   <form action="index.php">
+     <input type="text" placeholder="LET'S EXPLORE!" name="search">
+     <button type="submit"><i class="fa fa-search"></i></button>
+   </form>
+ </div>
+
+<!--Playlists -->
+<img src='../img/plus.png' id='addPlaylist'> Create playlist
 
 <div id="listPlaylist"  >
 	<div  id="myPlaylist">
 		My Playlists
-
 		<div id="listMy"> </div>
-
 	</div>
 
 	<div id="followPlaylist">
 	    Following Playlists
 		<div id="listFollow"> </div>
 	</div>
-
 </div>
 
 <div id="currentPlaylist" style="float: right; margin-right: 500px; ">
-	Current Playlists<br>
 	   Select your playlist to see videos here!
 	   <div id="videos"> </div>
 
 </div>
 
+    </div>
 
   <!-- Footer -->
+    <div class="footer col-12 col-m-12">
       <br>
-        <p class="l"><a class="link" href="#news">Copyright</a></p><p class="l">|</p>
-        <p class="l"><a class="link" href="#news">About Us</a></p><p class="l">|</p>
-        <p class="l"><a class="link" href="#news">Contact</a></p>
-        <br>
-<script type="text/javascript" src="../script/playlists.js"></script>
+        <p><a class="link" href="index.html">FAQs</a> &emsp; | &emsp; <a class="link" href="index.html">About Us</a> &emsp; | &emsp; <a class="link" href="index.html">Contact</a></p>
+    </div>
+<script src="../script/playlists.js"></script>
 </body>
 </html>

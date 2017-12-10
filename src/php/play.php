@@ -1,75 +1,119 @@
 <?php
-	  session_start();
-	  date_default_timezone_set('Europe/Madrid');
-	  include 'php/commentForm.php';
-	  require_once 'php/connect.php';
+	session_start();
+	date_default_timezone_set('Europe/Madrid');
+    // include 'php/commentForm.php';
+    // require_once 'php/connect.php';
 ?>
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head>
 	<title>Cartoons-PLAY</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../style/play_video.css">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-<ul class="topnav">
-	<?php
-    if (!isset($_SESSION['logged'])) { echo "<li><a class='active' href='#home'> <img class='proPic' src='../images/Profile_pic.png' alt='R_proPic'>";}
-    else {echo "<li><a class='active' href='index.php'> <img class='proPic' src='".$_SESSION['photopath']."'>"; }
-    echo "<a class='link' href='index.php'>TeleTubbie</a> <img class='redHand' src='../images/red_hand.png' alt='R_redHand'></a></li>";
+  <!-- Modal Box -->
+	<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Create a new playlist</h2>
+    </div>
+    <div class="modal-body">
+    <form method="post" action="#" id="form">
+    <br>
+            
+      <span id="result"></span>
+      <input type="submit" class="button" name="add" id="add" value="Add"><br><br>
+    </form>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation bar -->
+    <ul>
+      <?php
+    if (!isset($_SESSION['logged'])) 
+    	 { echo "<img class='nav' id='profile' src='../img/profile_pic.png'>";}
+    else { echo "<img class='nav' id='profile' src='".$_SESSION['photopath']."'>"; }
+
+		echo "<a href='index.php'><img class='nav' id='logo' src='../img/logo.png'></a>";
+		echo "<img class='nav' id='menu' src='../img/options.png'>";
+	    	  
 	if (!isset($_SESSION['logged']))
-	  {echo "<li><a class='active' href='in/signIn.php'> <img class='signIn' src='../images/sign_in.png' alt='R_signIn'></a></li>";}
-	if (isset($_SESSION['logged'])) { echo "<li><a href='signOut.php'>Sign Out</a></li>";}//here picture of sign out
-	echo "<li><a class='active' href='index.php'> <img class='menu' src='../images/menu.png' alt='R_menu'> </a></li>";
+	     { echo "<a href='in/signIn.php'><img class='nav' id='login' src='../img/login.png'></a>";}
+
+	else { echo "<a href='signOut.php'><img class='nav' id='login' src='../img/signout.png'></a>";}
+ 
 	?>
-</ul>
+    </ul>
 
-<div class="row">
-<!-- Search Bar -->
-	<input type="search" name="search" placeholder="LET'S EXPLORE! ">
-	<?php
-    if (!isset($_SESSION['logged']))
-	echo "<button type='submit' class='searchButton'><i class='fa fa-search'></i></button>"; //link to anything
-    else echo "<button type='submit' class='searchButton'><i class='fa fa-search'></i></button>"; //link to sign in
+  <!-- Menu -->
+  <div class="menu">
+  <form>
+    <button class="option" id="home" formaction="index.php"><i class="fa fa-home"></i> HOME</button><br>
+    <?php
+		if (isset($_SESSION['logged']))
+	    echo "<button class='option' id= 'list' formaction='playlists.php'><i class='fa fa-list-alt'></i> MY PLAYLISTS</button><br>";
+	    else echo "<button class='option' id= 'list' formaction='in/signIn.php'><i class='fa fa-list-alt'></i> MY PLAYLISTS</button><br>";
     ?>
-<!--here everything inside play page-->
+    <button class="option" id="help" formaction="https://support.google.com/?hl=es"><i class="fa fa-question-circle"></i> HELP</button>
+  </form>
+</div>
 
+  <div class="menu">
+    <img class="person" id="boy1" src="../img/boy1.png"><br>
+    <img class="person" id="girl" src="../img/girl.png"><br>
+    <img class="person" id="boy2" src="../img/boy2.png">
+  </div>
+
+
+    <div class="row">
+      <br>
+  <!--Search engine -->
+  <div class="search-container">
+   <form action="index.php">
+     <input type="text" placeholder="LET'S EXPLORE!" name="search">
+     <button type="submit"><i class="fa fa-search"></i></button>
+   </form>
+ </div>
+
+<!--Playlists -->
 <div id="playContent">
-	
-<div id="mainVideo">
-	<div id="video">
-		
+	<div id="mainVideo">
+		<div id="video"></div>
+		<div id="informVideo"></div>
+		<div id="comments">
+			<?php  
+	            // echo "<form method='post' action='php/setComment.php' id='form-set'>
+	            //       <input type='hidden' name='nickname' id='nickname' value='nicknameuser'> 
+	            //       <input type='hidden' name='date' id='date' value='".date('Y-m-d H:i:s')."'>
+	            //       <input type='hidden' name='idVideo' id='idVideo' value='idVideo'>
+	            //       <textarea name='message' id='commentMessage' placeholder='Write a comment...'></textarea><br><br>
+	            //       <button class='button' id='commentButton' type='submit' name='commentSubmit'>Comment</button>
+	            //       <p id='form-message'> </p>
+	            //       </form>";
+	            // echo "<div class='box' id='box'></div>";
+	            // echo "<button class='btn_more' id='btn_more'>More comments</button>";
+	            ?>
+		</div>
 	</div>
-	<div id="informVideo">
-		
-	</div>
-	<div id="comments">
-		<?php  
-            echo "<form method='post' action='php/setComment.php' id='form-set'>
-                  <input type='hidden' name='nickname' id='nickname' value='nicknameuser'> 
-                  <input type='hidden' name='date' id='date' value='".date('Y-m-d H:i:s')."'>
-                  <input type='hidden' name='idVideo' id='idVideo' value='idVideo'>
-                  <textarea name='message' id='commentMessage' placeholder='Write a comment...'></textarea><br><br>
-                  <button class='button' id='commentButton' type='submit' name='commentSubmit'>Comment</button>
-                  <p id='form-message'> </p>
-                  </form>";
-            echo "<div class='box' id='box'></div>";
-            echo "<button class='btn_more' id='btn_more'>More comments</button>";
-            ?>
-	</div>
-
-<div id="videoRandom">
-	
-
+    <div id="videoRandom"></div>
 </div>
 
+    </div>
 
-</div>
-</div>
-    <script type="text/javascript" src="../script/play_video.js"></script>
+  <!-- Footer -->
+    <div class="footer col-12 col-m-12">
+      <br>
+        <p><a class="link" href="index.html">FAQs</a> &emsp; | &emsp; <a class="link" href="index.html">About Us</a> &emsp; | &emsp; <a class="link" href="index.html">Contact</a></p>
+    </div>
+ <script type="text/javascript" src="../script/play_video.js"></script>
 </body>
 </html>
