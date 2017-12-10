@@ -1,5 +1,9 @@
 <?php
 	session_start();
+  include "connect.php";
+  $amount = 1;
+  $result = $connect -> query ("SELECT path, title, idVideos FROM videos");
+        if (!$result) throw new Exception($connect->error);
 ?>
 <!DOCTYPE html>
 <html>
@@ -66,18 +70,86 @@
 <!--Playlists -->
 <div class="playlists">
   <h1>Recommended Videos</h1>
-       <!-- <iframe width="180" height="128" src="https://www.youtube.com/embed/pX9irV_3C4o" frameborder="0" allowfullscreen></iframe> -->
- <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+
+  <?php
+        
+        if ($result->num_rows > 0) 
+        {
+              while($row = $result->fetch_assoc()) 
+              {   
+                  if ($amount<4)
+                  {
+                    echo "<img id='".$row["idVideos"]."' class='video' src='".$row["path"]."' frameborder='0' a>
+                    <!--<span id='title'>".$row["title"]."</span>-->";
+                    $amount = $amount + 1;
+                    if ($amount>3) break;
+                  }
+              } 
+        }  
+
+  ?>
+
+ <!-- <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">-->
 
   <h1>Movies</h1>
- <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+
+ <!-- <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"> -->
+  <?php
+        
+        if ($result->num_rows > 0) 
+        {
+              while($row = $result->fetch_assoc()) 
+              {   
+                  if ($amount<7)
+                  {
+                    echo "<img id='".$row["idVideos"]."' class='video' src='".$row["path"]."' frameborder='0' a>
+                    <!--<span id='title'>".$row["title"]."</span>-->";
+                    $amount = $amount + 1;
+                    if ($amount>6) break;
+                  }
+              } 
+        }  
+
+  ?>
 
   <h1>TV Series</h1>
-  <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+ <!--  <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"> -->
+  <?php
+        
+        if ($result->num_rows > 0) 
+        {
+              while($row = $result->fetch_assoc()) 
+              {   
+                  if ($amount<10)
+                  {
+                    echo "<img id='".$row["idVideos"]."' class='video' src='".$row["path"]."' frameborder='0' a>
+                    <!--<span id='title'>".$row["title"]."</span>-->";
+                    $amount = $amount + 1;
+                    if ($amount>9) break;
+                  }
+              } 
+        }  
+
+  ?>
 
   <h1>Trending</h1>
-  <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
-
+  <!-- <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"> -->
+   <?php
+        
+        if ($result->num_rows > 0) 
+        {
+              while($row = $result->fetch_assoc()) 
+              {   
+                  if ($amount<13)
+                  {
+                    echo "<img id='".$row["idVideos"]."' class='video' src='".$row["path"]."' frameborder='0' a>
+                    <!--<span id='title'>".$row["title"]."</span>-->";
+                    $amount = $amount + 1;
+                    if ($amount>12) break;
+                  }
+              } 
+        }  
+  ?>
 </div>
 
     </div>
@@ -85,8 +157,9 @@
   <!-- Footer -->
     <div class="footer col-12 col-m-12">
       <br>
-        <p><a class="link" href="index.html">FAQs</a> &emsp; | &emsp; <a class="link" href="index.html">About Us</a> &emsp; | &emsp; <a class="link" href="index.html">Contact</a></p>
+        <p><a class="link" href="index.php">FAQs</a> &emsp; | &emsp; <a class="link" href="index.php">About Us</a> &emsp; | &emsp; <a class="link" href="index.php">Contact</a></p>
     </div>
 <script src="../script/index.js"></script>
+<script src="../script/between.js"></script>
 </body>
 </html>

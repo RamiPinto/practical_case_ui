@@ -2,7 +2,12 @@
 	session_start();
 	date_default_timezone_set('Europe/Madrid');
     // include 'php/commentForm.php';
-    // require_once 'php/connect.php';
+  include "connect.php";
+  // if (!isset($_POST['idVideo']))
+  // {
+  //   header('Location: index.php');
+  //   exit();
+  // }
 ?>
 <!DOCTYPE html>
 <html>
@@ -86,25 +91,20 @@
 
 <!--Playlists -->
 <div id="playContent">
-	<div id="mainVideo">
-		<div id="video"></div>
-		<div id="informVideo"></div>
-		<div id="comments">
-			<?php  
-	            // echo "<form method='post' action='php/setComment.php' id='form-set'>
-	            //       <input type='hidden' name='nickname' id='nickname' value='nicknameuser'> 
-	            //       <input type='hidden' name='date' id='date' value='".date('Y-m-d H:i:s')."'>
-	            //       <input type='hidden' name='idVideo' id='idVideo' value='idVideo'>
-	            //       <textarea name='message' id='commentMessage' placeholder='Write a comment...'></textarea><br><br>
-	            //       <button class='button' id='commentButton' type='submit' name='commentSubmit'>Comment</button>
-	            //       <p id='form-message'> </p>
-	            //       </form>";
-	            // echo "<div class='box' id='box'></div>";
-	            // echo "<button class='btn_more' id='btn_more'>More comments</button>";
-	            ?>
-		</div>
-	</div>
-    <div id="videoRandom"></div>
+	  <div id="mainVideo"></div>
+    <div id="videoRandom">
+    	<?php
+    		$result = $connect -> query ("SELECT path, title, idVideos FROM videos");
+                    if (!$result) throw new Exception($connect->error);
+            if ($result->num_rows > 0) 
+	        {
+	              while($row = $result->fetch_assoc()) 
+	              {   
+	                echo "<img id='".$row["idVideos"]."' class='video' src='".$row["path"]."' ><br>";
+	              } 
+            }  
+    	?>
+    </div>
 </div>
 
     </div>
@@ -112,8 +112,9 @@
   <!-- Footer -->
     <div class="footer col-12 col-m-12">
       <br>
-        <p><a class="link" href="index.html">FAQs</a> &emsp; | &emsp; <a class="link" href="index.html">About Us</a> &emsp; | &emsp; <a class="link" href="index.html">Contact</a></p>
+        <p><a class="link" href="index.php">FAQs</a> &emsp; | &emsp; <a class="link" href="index.php">About Us</a> &emsp; | &emsp; <a class="link" href="index.php">Contact</a></p>
     </div>
  <script type="text/javascript" src="../script/play_video.js"></script>
+ <script src="../script/between.js"></script>
 </body>
 </html>
