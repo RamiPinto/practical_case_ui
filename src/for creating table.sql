@@ -15,7 +15,7 @@ idVideo int(11) NOT NULL
 );
 
 CREATE OR REPLACE TABLE playlists (
-    idPlaylists int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    idPlaylist int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     title text NOT NULL,
     amVid int(11) NOT NULL,
     type text NOT NULL,

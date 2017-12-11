@@ -19,6 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+
   <!-- Modal Box -->
 	<div id="myModal" class="modal">
   <!-- Modal content -->
@@ -48,18 +49,18 @@
 <!-- Navigation bar -->
     <ul>
       <?php
-    if (!isset($_SESSION['logged'])) 
+    if (!isset($_SESSION['logged']))
     	 { echo "<img class='nav' id='profile' src='../img/profile_pic.png'>";}
     else { echo "<img class='nav' id='profile' src='".$_SESSION['photopath']."'>"; }
 
 		echo "<a href='index.php'><img class='nav' id='logo' src='../img/logo.png'></a>";
 		echo "<img class='nav' id='menu' src='../img/options.png'>";
-	    	  
+
 	if (!isset($_SESSION['logged']))
 	     { echo "<a href='in/signIn.php'><img class='nav' id='login' src='../img/login.png'></a>";}
 
 	else { echo "<a href='signOut.php'><img class='nav' id='login' src='../img/signout.png'></a>";}
- 
+
 	?>
     </ul>
 
@@ -94,24 +95,32 @@
  </div>
 
 <!--Playlists -->
-<img src='../img/plus.png' id='addPlaylist'> Create playlist
-
-<div id="listPlaylist"  >
-	<div  id="myPlaylist">
-		My Playlists
-		<div id="listMy"> </div>
+<div id="listPlaylist" >
+	<div  class= "PL" id="myPlaylist">
+		<h2>My Playlists</h2>
+		<button id="addPlaylist" formaction=""><i class="fa fa-plus-circle"></i>Add New Playlist</button><br>
+		<div class="videoList" id="listMy"></div>
 	</div>
 
-	<div id="followPlaylist">
-	    Following Playlists
-		<div id="listFollow"> </div>
+	<div class="PL" id="followPlaylist">
+	<h2>Following Playlists</h2>
+		<div class="videoList" id="listFollow"></div>
 	</div>
 </div>
 
-<div id="currentPlaylist" style="float: right; margin-right: 500px; ">
-	   Select your playlist to see videos here!
-	   <div id="videos"> </div>
-
+<div id="currentPlaylist">
+	  <div id="selectPL">Select your playlist to see videos here!</div>
+	   <div id="videos">
+		 <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+		 <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+		 <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+		 <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+		<img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+		<img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+		<img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+		<img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+		<img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+	 </div>
 </div>
 
     </div>
