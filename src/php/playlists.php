@@ -25,8 +25,8 @@
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Create a new playlist</h2>
+      <span class="close">&#x2718;</span>
+      <h1>Create a new playlist</h1>
     </div>
     <div class="modal-body">
     <form method="post" action="#" id="form">
@@ -39,7 +39,7 @@
       <label for="type2">Public</label><br>
       <input type="radio" name="type" id="type3" value="Collaborative list">
       <label for="type3">Collaborative list</label><br>
-      <span id="result"></span>
+			<span id="result"></span>
       <input type="submit" class="button" name="add" id="add" value="Add"><br><br>
     </form>
     </div>
