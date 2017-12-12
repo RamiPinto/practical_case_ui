@@ -23,17 +23,24 @@
 </head>
 <body>
   <!-- Modal Box -->
-	<div id="myModal" class="modal">
+<div id="myModal" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Create a new playlist</h2>
+      <span class="close">&#x2718;</span>
+      <h1>Add video to playlist</h1>
     </div>
     <div class="modal-body">
     <form method="post" action="#" id="form">
     <br>
-            
+      <input type="text" name="title" id="title" placeholder="Enter the title of new playlist">
+      <br>
+      <input type="radio" name="type" id="type1" value="Private">
+      <label for="type1">Private</label><br>
+      <input type="radio" name="type" id="type2" value="Public">
+      <label for="type2">Public</label><br>
+      <input type="radio" name="type" id="type3" value="Collaborative list">
+      <label for="type3">Collaborative list</label><br>
       <span id="result"></span>
       <input type="submit" class="button" name="add" id="add" value="Add"><br><br>
     </form>

@@ -16,14 +16,13 @@
     $size = sizeof($descriptionPieces);
 	    	echo 
 	    	"<div id='main'><img id='mainV' src='".$row["path"]."' ></div>
-		     <div id='informVideo'><br><span id='title'>title: ".$row["title"]."<span><br><br>
-		     views: <span id='views'>".$row["views"]."<span>
-		     likes: <span id='likes'>".$row["likes"]."<span>
-		     dislikes: <span id='dislikes'>".$row["dislikes"]."<span>
-		     <button id='follow'>Follow</button>
+		     <div id='informVideo'><br><span id='title'>".$row["title"]."<span><br><br>
+		     <img src='../img/view.png' id='view'><span id='views'>".$row["views"]."<span>
+		     <img src='../img/like.png' id='like'><span id='likes'>".$row["likes"]."<span>
+		     <img src='../img/dislike.png' id='dislike'> <span id='dislikes'>".$row["dislikes"]."<span>
+		     <button id='follow' class='button'>Follow</button>
 		     <img id='share' src='../img/share.png'>
-		     <img id='addTo' src='../img/add.png'><br><br>
-		     description: ";
+		     <img id='addTo' src='../img/add.png'><br><br>";
 		        for ($i = 0; $i < $size; $i++)
 		        {
 			    	echo $descriptionPieces[$i]."<br>";

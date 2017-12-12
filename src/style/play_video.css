@@ -433,9 +433,14 @@ visibility: hidden;
   margin: 5px;
   cursor: pointer;
 }
-#likes, #dislikes
+#likes, #dislikes, #views
 {
   cursor: pointer;
+  margin-right: 10px;
+}
+#like, #dislike, #view
+{
+  margin-left: 15px;
 }
 #follow
 {
@@ -445,3 +450,180 @@ visibility: hidden;
   cursor: pointer;
   margin-right: 40px;
 }
+
+/*comment*/
+
+.btn_more
+{
+  width: 100%;
+  height: 20px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #eff9fe;
+  border:none;
+  opacity: 0.7;
+  cursor: pointer;
+  text-decoration: underline;
+}
+#commentMessage{
+  clear: both;
+  margin:0 auto;
+  border:none;
+  padding:14px 18px;
+  color:#333333;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  position:relative;
+  width:450px;
+  outline:none;
+  font-family:"Comic Sans MS";
+  font-weight: bold;
+  font-size:15px;
+  margin-left: 50px;
+  background-color: rgba(255,153,0,0.5);
+}
+#commentMessage:hover {
+  background:#686661;
+  color:#ffffff;
+}
+#commentButton
+{
+  float: right;
+  margin-right: 100px;
+  clear:both;
+  margin-bottom: 10px;
+}
+#commentMessage {
+  height:100px;
+  overflow:auto;
+  resize:none;
+  cursor:text;
+}
+#comment_box
+{
+  clear: both;
+  padding: 10px;
+  position: relative;
+}
+#comment_box p
+{
+  font-size:15px;
+  color:#333333;
+  box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+  -khtml-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+  -moz-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+  -ms-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+  -o-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+  -webkit-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+  padding:12px 10px 12px 10px;
+  width:550px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color:#eeeeee;
+  font-family:"Comic Sans MS";
+    font-weight: bold;
+  -moz-transition:all 0.3s linear;
+  -webkit-transition:all 0.3s linear;
+  -o-transition:all 0.3s linear;
+  -ms-transition:all 0.3s linear;
+  transition:all 0.3s linear;
+  cursor:default;
+  height: auto;
+  position: relative;
+  margin-bottom: 0px;
+}
+.error-message
+{
+  color:red;
+  margin-left: 90px;
+  font-size: 15px;
+
+}
+.success-message
+{
+  color:green;
+  margin-left: 90px;
+  font-size: 15px;
+}
+.edit-form
+{
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+.Ucomment
+{
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  opacity: 0.9;
+}
+
+.Dcomment
+{
+  position: absolute;
+  top: 15px;
+  left: 124px;
+  opacity: 0.9;
+}
+.Mcomment
+{
+  position: relative;
+  padding:15px;
+  margin-left: 20px;
+  margin-top: 5px;
+  
+}
+
+.edit-form button
+{
+  width: 110px;
+  height: 20px;
+  background-color:#eeeeee;
+  border:none;
+  opacity: 0.7;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.edit-form button:hover
+{
+  opacity: 1;
+}
+.vl
+{
+  border-left: 1.5px solid #333333;
+    height: 20px;
+    position: absolute;
+  top: 12px;
+  left: 119px;
+  opacity: 0.6;
+}
+.delete-form
+{
+  position: absolute;
+  top: 15px;
+  right: 140px;
+}
+.delete-form button
+{
+  width: 80px;
+  height: 20px;
+  background-color:#eeeeee;
+  border:none;
+  opacity: 0.7;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.delete-form button:hover
+{
+  opacity: 1;
+}
+.scroll-pane
+{
+  width: 100%;
+  height: 200px;
+  overflow: auto;
+}
+
