@@ -329,16 +329,6 @@ The platform prevents the user from making mistakes. The unallowed options can n
 \end{center}
 
 
-### 3.2.1. Site 3:
-
-#### A) Context
-
-#### B) Nielsen's Heuristics
-
-#### C) Van Duyne Patterns
-
-
-
 \newpage
 
 # 4. Previous Prototypes
@@ -509,7 +499,50 @@ For implementing the web page, we have decided to use php code, which is pretty 
 
 In final prototype we followed the number two, because after defined the main goal in our case is for children , it will be easier for them use and enjoy watching videos. But several parts we took from first prototype such as about us, help, more friendly and lovely design which will be more suitable for our desired users.
 
+\begin{center}
+   \includegraphics[width=170mm]{./img/tt1.jpeg}
+   \captionof{figure}{}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/tt3.jpeg}
+   \captionof{figure}{}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/tt4.jpeg}
+   \captionof{figure}{}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/tt5.jpeg}
+   \captionof{figure}{}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/tt6.jpeg}
+   \captionof{figure}{}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/tt7.jpeg}
+   \captionof{figure}{}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/tt8.jpeg}
+   \captionof{figure}{}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/tt9.jpeg}
+   \captionof{figure}{}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/tt2.jpeg}
+   \captionof{figure}{}
+\end{center}
+
 
 \newpage
 
 # 8. Conclusion and Personal Opinion
+
+This practice is a great way of practicing the html, css and javascript code developed during the lab classes and the exercises. It is also a good opportunity to delve into our knowledge of code of webpages, since we could experience writing in php, which wasn’t explained in class.
+
+Also, the analysis of the personas and the similar websites help us to understand and remember better the Nielsen’s heuristics and the Van Duyne patterns, as we are using them to analyze three different web pages that are similar to the one that we are developing.
+
+We accomplished the initial goals of this lab and gained a lot of knowledge in the process. However, we have had to face some problems during the development of the exercises as a consequence of not being familiar with php programming language. Despite all these problems, we have carried out the practice in the best way that we could and now we think that we have a greater understanding of the theoretical concepts seen in class. Overall, this lab was challenging but it taught us a lot.
