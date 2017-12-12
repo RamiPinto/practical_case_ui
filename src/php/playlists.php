@@ -112,15 +112,15 @@
 <div id="currentPlaylist">
 	  <div id="selectPL">Select your playlist to see videos here!</div>
 	   <div id="videos">
+		 <!-- <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
 		 <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
 		 <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
 		 <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
-		 <img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
 		<img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
 		<img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
 		<img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
 		<img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
-		<img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png">
+		<img class="video" src="../img/v1.png"><img class="video" src="../img/v1.png"> -->
 	 </div>
 </div>
 

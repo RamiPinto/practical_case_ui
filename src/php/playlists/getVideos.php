@@ -11,7 +11,7 @@
 	    while($row1 = $result1->fetch_assoc()) 
 	    {
 	    	$idVideo = $row1["idVideo"];
-			$result2 = $connect -> query ("SELECT path FROM videos WHERE idVideos='$idVideo'");
+			$result2 = $connect -> query ("SELECT path, idVideos FROM videos WHERE idVideos='$idVideo'");
 				if (!$result2) throw new Exception($connect->error);
 				
 				if ($result2->num_rows > 0) 

@@ -3,7 +3,7 @@
 	include "connect.php";
 
 	//header('Location: playlists.php');
-	//$_SESSION['click'] = $_POST['click']; //uncomment
+	$_SESSION['click'] = $_POST['click']; //uncomment
 
 	$idVideo = $_POST['idVideo'];
 	$result = $connect -> query ("SELECT * FROM videos WHERE idVideos='$idVideo'");
