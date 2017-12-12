@@ -3,11 +3,11 @@
 	date_default_timezone_set('Europe/Madrid');
     // include 'php/commentForm.php';
   include "connect.php";
-  // if (!isset($_POST['idVideo']))
-  // {
-  //   header('Location: index.php');
-  //   exit();
-  // }
+  if (isset($_SESSION['click'])) //set !
+  {
+    header('Location: index.php');
+    exit();
+  }
 ?>
 <!DOCTYPE html>
 <html>

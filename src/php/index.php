@@ -160,6 +160,6 @@
         <p><a class="link" href="index.php">FAQs</a> &emsp; | &emsp; <a class="link" href="index.php">About Us</a> &emsp; | &emsp; <a class="link" href="index.php">Contact</a></p>
     </div>
 <script src="../script/index.js"></script>
-<script src="../script/between.js"></script>
+<script src="../script/betweenExternal.js"></script>
 </body>
 </html>

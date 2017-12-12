@@ -109,12 +109,6 @@ input {
 .success-message{
   color: #4CAF50;
 }
-span{
-  cursor: pointer;
-}
-span:hover {
-  color: yellow;
-}
 #addPlaylist
 {
   cursor: pointer;
@@ -401,4 +395,53 @@ visibility: hidden;
 .footer a
 {
   cursor:pointer;
+}
+
+#mainVideo
+{
+  float: left;
+  margin-left: 120px;
+  margin-top: 100px;
+}
+#videoRandom
+{
+  float:right;
+  margin-top: 100px;
+  margin-right: 350px;
+}
+.video
+{
+  width:200px;
+  height: 130px;
+}
+#mainV
+{
+  position: relative;
+  width: 600px;
+  height:350px;
+}
+#share 
+{
+  float: right;
+  margin: 5px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+#addTo
+{
+  float: right;
+  margin: 5px;
+  cursor: pointer;
+}
+#likes, #dislikes
+{
+  cursor: pointer;
+}
+#follow
+{
+  position: relative;
+  float: right;
+  margin: 5px;
+  cursor: pointer;
+  margin-right: 40px;
 }

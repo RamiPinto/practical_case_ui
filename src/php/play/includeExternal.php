@@ -1,6 +1,10 @@
 <?php
 	session_start();
 	include "connect.php";
+
+	header('Location: playlists.php');
+	//$_SESSION['click'] = $_POST['click']; //uncomment
+
 	$idVideo = $_POST['idVideo'];
 	$result = $connect -> query ("SELECT * FROM videos WHERE idVideos='$idVideo'");
 	if (!$result) throw new Exception($connect->error);
@@ -20,9 +24,7 @@
 		     views: <span id='views'>".$row["views"]."<span>
 		     likes: <span id='likes'>".$row["likes"]."<span>
 		     dislikes: <span id='dislikes'>".$row["dislikes"]."<span>
-		     <button id='follow'>Follow</button>
-		     <img id='share' src='../img/share.png'>
-		     <img id='addTo' src='../img/add.png'><br><br>
+		     <img id='share' src='../img/share.png'><img id='addTo' src='../img/add.png'><br><br>
 		     description: ";
 		        for ($i = 0; $i < $size; $i++)
 		        {
@@ -51,5 +53,5 @@
 	        echo "<button class='btn_more' id='btn_more'>More comments</button>
 			</div>";    
 	
-	$connect->close();	   	
+	//$connect->close();	   	
 ?>
