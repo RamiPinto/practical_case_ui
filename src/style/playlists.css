@@ -131,7 +131,10 @@ input {
 #result
 {
   float: left;
-  margin-left: 100px;
+  margin: 0px;
+  font-size: 13px;
+  font-weight: lighter;
+  padding: 0;
 }
 .error-message
 {
@@ -143,9 +146,7 @@ input {
 span{
   cursor: pointer;
 }
-span:hover {
-  color: yellow;
-}
+
 #addPlaylist
 {
   cursor: pointer;

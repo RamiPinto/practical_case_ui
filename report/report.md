@@ -48,7 +48,11 @@ The webpage implemented is a video streaming web page. Therefore, the main goal 
 
 ## 3.1. End Users Description
 
-### User 1:
+### User 1: Lucas
+
+\begin{center}
+   \includegraphics[width=90mm]{./img/user1.png}
+\end{center}
 
 
 ### User 2:
@@ -151,7 +155,7 @@ Help button is in the settings menu, not particularly easy to find for inexperie
 
 #### A) Context
 
-Movistar+ is a subscription platform for digital television. The web platform was created with the aim of allowing users to access the digital TV channels package from any device with internet connection. TV programs can be stopped, fast forward, rewind or recorded while seeing. In addition to provide access to national and international television channels through the internet, it also includes the possibility of seeing Movies, series, sport matches, documentaries and more.
+Movistar+ is a subscription platform for digital television. The web platform was created with the aim of allowing users to access the digital TV channels package from any device with internet connection. TV programs can be stopped, fast forward, rewind or recorded while seeing. In addition to provide access to national and international television channels through the internet, it also includes the possibility of seeing movies, series, sport matches, documentaries and more. Besides, the platform has a section for children, so they can surf safely between content that interests them.
 
 #### B) Nielsen's Heuristics
 
@@ -237,6 +241,28 @@ The platform prevents the user from making mistakes. The unallowed options can n
 
 
 #### C) Van Duyne Patterns
+
+1. B: Navigation Framework
+
+- B1:Search and navigation tools placed at the top and start of the page.
+- B2:Content organized in categories that make sense to the users in an intuitive way.
+- B3:Hierarchical organization with descriptive category names. However, there are some generic terms.
+- B7:Popularity based organization
+- B8: The pages are categorized by highlighting in the navigation bar the section in which the user is.
+\begin{center}
+   \includegraphics[width=170mm]{./img/mvb.png}
+   \captionof{figure}{Van Duyne Pattern B}
+\end{center}
+
+2. J: Making Site Search Fast and Relevant
+
+- J1: Search action module
+- J2: Search engine that does not require extreme precision
+- J3: Organized search result based
+\begin{center}
+   \includegraphics[width=170mm]{./img/mvj.png}
+   \captionof{figure}{Van Duyne Pattern J}
+\end{center}
 
 
 ### 3.2.1. Site 3:
