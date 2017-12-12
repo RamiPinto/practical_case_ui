@@ -1,6 +1,6 @@
  $(document).on('click', '.video', function() {
         var idVideo = this.id;
-        //location.replace("play.php");
+        location.replace("play.php");
         $("#mainVideo").load("play/includeExternal.php", {idVideo: idVideo});
 });
 $(document).on('click', '.video', function() {
