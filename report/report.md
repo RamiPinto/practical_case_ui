@@ -40,6 +40,10 @@ The webpage implemented is a video streaming web page. Therefore, the main goal 
 
 ## 2.2. Functionalities
 
+The webpage supported two modes of being there, otherwise it can be used with or without a subscriptions.
+Not subscribed users have less available functionalities and opportunities. So in this mode it will work not fully. They can navigate published videos and basic information about them such as descriptions, amount of likes, dislikes, sharing, titles and how many people have seen this current video. Also search videos related to a specific topic with search system which is built inside of the website for using it easy and without confusing and also create an account and then sign in to the system.
+When the user is logged to the system, here we can notice bigger range of various functionalities. Keeping functionalities which has unregistered user and much more. Additionally, they can interact directly with the videos (likes, comments, sharing in other social networks), save favorite videos to the playlists, which are created by that user, subscribe playlists from other users. In creating playlist process will be available three options such as private list which nobody can follow, public list which are visible for everybody and collaborative list where other users can participate and add different content.
+
 
 
 \newpage
@@ -49,16 +53,20 @@ The webpage implemented is a video streaming web page. Therefore, the main goal 
 ## 3.1. End Users Description
 
 ### User 1: Lucas
-
 \begin{center}
    \includegraphics[width=170mm]{./img/user1.png}
 \end{center}
 
 
-### User 2:
+### User 2: Ross
+\begin{center}
+   \includegraphics[width=170mm]{./img/user2.jpeg}
+\end{center}
 
-
-### User 3:
+### User 3: Mary
+\begin{center}
+   \includegraphics[width=170mm]{./img/user3.jpeg}
+\end{center}
 
 
 ## 3.2. Analysis and Evaluation of Similar Web Pages
@@ -402,7 +410,88 @@ The second prototype, which was “ScoobyMovie”, had a much more similar main 
 
 ## 5.1. Design Reasons
 
+When we faced the design of the new prototype, our intention was to try to put together the good points of each one of the analyzed websites in a new page that  satisfies the needs of the users to whom it is oriented. For this reason we can see a minimalist design, very simple and easy to use, as the large and striking letters and icons denote. The sidebar menu has 3 options, each one of them accompanied by a character to make the options easier to recognize by the children and create a kid-friendly interface.
+
+\begin{center}
+   \includegraphics[width=55mm]{./img/ryb.jpg}
+   \captionof{figure}{Home menu without Parental Control}
+\end{center}
+
+The page color pattern is based on the RYB color model. As we can see, all the design is based on the three main colors of the model: Red, Yellow and Blue, but we left  the color design open enough to ensure that no color is out of tone, as a video page expects a great diversity of colors in the video thumbnails. Predominant color is blue, as this color is associated with the calm and tranquility, and it does not tire the eyes or distract from the main elements. Yellow is used for the important elements to attract attention and be easy to recognize. And finally, red is only used for design reasons and as a pigment to mix with the other main colors to create a wider range of colors, it has not been intended to be abused in its use because of its negative connotations, as it is usually associated with errors and it tires the eyes.
+
+During the design process, we were very mindful of the design patterns. Some of them are explained in the following points.
+
 ## 5.2. Nielsen's Heuristics
+
+1. Visibility of system status
+
+The page keep users informed about what is going on when they make any action by means of short messages that are easy to understand.
+\begin{center}
+   \includegraphics[width=170mm]{./img/tn1.png}
+   \captionof{figure}{Visibility of system status}
+\end{center}
+
+2. Match between system and the real world
+
+The page speaks in a colloquial and animated tone.
+\begin{center}
+   \includegraphics[width=170mm]{./img/tn2.png}
+   \captionof{figure}{Match between system and the real world}
+\end{center}
+
+3. User control and freedom
+When the user log in they can choose undo the action or go forward.
+\begin{center}
+   \includegraphics[width=170mm]{./img/tn3.png}
+   \captionof{figure}{User control and freedom}
+\end{center}
+
+4. Consistency and standards
+
+In every moment we have tried to follow a standard according to the website conventions in order to not create inconsistencies.
+
+5. Error prevention
+
+The page prevents the user from making mistakes by reporting incorrect actions and highlighting the correct settings.
+\begin{center}
+   \includegraphics[width=170mm]{./img/tn5.png}
+   \captionof{figure}{Error prevention}
+\end{center}
+
+6. Recognition rather than recall
+The options in the navigation bar are always visible, and the rest of options are very easy to found in every moment.
+\begin{center}
+   \includegraphics[width=170mm]{./img/tn6.png}
+   \captionof{figure}{Recognition rather than recall}
+\end{center}
+
+7. Flexibility and efficiency of use
+The users can access to the sidebar menu in different ways.
+\begin{center}
+   \includegraphics[width=170mm]{./img/tn7.png}
+   \captionof{figure}{Flexibility and efficiency of use}
+\end{center}
+
+8. Aesthetic and minimalist design
+Dialogues doesn't contain information which is irrelevant or rarely needed. And the design is simple and clear.
+\begin{center}
+   \includegraphics[width=170mm]{./img/tn8.png}
+   \captionof{figure}{Aesthetic and minimalist design}
+\end{center}
+
+9. Help users recognize, diagnose, and recover from errors
+All the error messages contain a description of the error that allows the user to fix it.
+\begin{center}
+   \includegraphics[width=170mm]{./img/tn9.png}
+   \captionof{figure}{Help users recognize, diagnose, and recover from errors }
+\end{center}
+
+10. Help and documentation
+One of the main options of the sidebar menu is the help button. Furthermore, at the button of the page the footer contains information about the page and more help options (FAQs, About Us, Contact).
+\begin{center}
+   \includegraphics[width=170mm]{./img/tn10.png}
+   \captionof{figure}{Help and documentation}
+\end{center}
 
 ## 5.3. Van Duyne Patterns
 
@@ -417,6 +506,8 @@ For implementing the web page, we have decided to use php code, which is pretty 
 \newpage
 
 # 7. Implementation Process
+
+In final prototype we followed the number two, because after defined the main goal in our case is for children , it will be easier for them use and enjoy watching videos. But several parts we took from first prototype such as about us, help, more friendly and lovely design which will be more suitable for our desired users.
 
 
 \newpage
