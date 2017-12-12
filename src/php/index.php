@@ -1,5 +1,6 @@
 <?php
 	session_start();
+  include "play.php";
   include "connect.php";
   $amount = 1;
   $result = $connect -> query ("SELECT path, title, idVideos FROM videos");
