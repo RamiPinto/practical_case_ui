@@ -51,7 +51,7 @@ The webpage implemented is a video streaming web page. Therefore, the main goal 
 ### User 1: Lucas
 
 \begin{center}
-   \includegraphics[width=90mm]{./img/user1.png}
+   \includegraphics[width=170mm]{./img/user1.png}
 \end{center}
 
 
@@ -78,7 +78,7 @@ Unregistered users can only watch videos on the site, while registered users are
 Progression bar with different colors. Black for unloaded content, gray for loaded, red for reproduced content and yellow for advertising parts.
 There is also a bar showing the like-dislike rate.
 \begin{center}
-   \includegraphics[width=90mm]{./img/yn1.png}
+   \includegraphics[width=170mm]{./img/yn1.png}
    \captionof{figure}{Visibility of system status}
 \end{center}
 
@@ -150,6 +150,62 @@ Help button is in the settings menu, not particularly easy to find for inexperie
 
 #### C) Van Duyne Patterns
 
+1. B: Navigation Framework
+
+- *B1: Multiple ways to navigate.* There is Search System, which is located at the top and start of the page. There is also a menu , which include everything what you need(of course, if the user is registered there is more options), for example: History, Watch Later, Liked videos, Subscriptions etc. So the navigation is really understandable and give the opportunity to find the corresponding information and content.
+- *B7: Popularity-based organization.* We can see and easy to find which content is the most popular. It has on the navigation on the left a field which is called TRENDING, where the user can find out a list of top content, and check how it was rated and over what period. And that is really useful information which is given in appropriate way.
+- *B8: Category pages.* The category sections are introduced with a consistent layout. The website has a really lovely design which help us to understand where the user is now by the switching colors of image to corresponding fields. For example, if we have red color which corresponds to Watch Later field , we now that we now are located inside of. If we aren’t, it has a grey color. Easy and understandable.
+\begin{center}
+   \includegraphics[width=170mm]{./img/yvdpb1.png}
+   \captionof{figure}{Van Duyne Pattern B1}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/yvdpb7.png}
+   \captionof{figure}{Van Duyne Pattern B7}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/yvdpb8.png}
+   \captionof{figure}{Van Duyne Pattern B8}
+\end{center}
+
+2. D: Writing and Managing content
+
+- *D1: Page Templates.* It defines an individual template that specifies content size limits for images and text. YouTube uses a very good template (GRID LAYOUT) and it demonstrates us the basic navigation elements just in three main content areas.
+- *D3: Headlines and blurbs.* It has short and distinctive headlines and blurbs to hook customers into clicking for more content deeper on the site. Each headline indicates why the context is important to visit corresponding page of the website. It is built comprehensible and quite naturally.
+- *D5: Message Box.* The message boards are really easy to find and use just by clicking on the related video or another kind of content. Also, there is an opportunity to save favorite boards in the customer profile, but that option just is enabled, when the user is REGISTERED. Everywhere people have the ability to read posts before signing in or signing up. It provides a simple form to post a new message or a reply.
+
+
+\begin{center}
+   \includegraphics[width=170mm]{./img/yvdpd1.png}
+   \captionof{figure}{Van Duyne Pattern D1}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/yvdpd3.png}
+   \captionof{figure}{Van Duyne Pattern D3}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/yvdpd5.png}
+   \captionof{figure}{Van Duyne Pattern D5}
+\end{center}
+
+3. E: Building Trust and credibility
+
+- *E1: Site Branding.* Youtube has built a strong site brand so that it has become the most popular platform to see and share videos. Its logo is visible on all pages and the company name appears repeatedly.
+- *E4: Privacy Policy.* The website found the way to tell their customers what kind of information it is collecting and how that information is used to provide value.
+- *E5: About us.* YouTube was taken care about this section ABOUT US. And we can feel it really clear, when I clicked on field ABOUT, I was moved to special website which is dedicated to corresponding section and information is well-ordered, so if the user wants to be familiar with You Tube it will be easy to do. It helps people learn more about what company is, what company does, and why people can trust the company. Also it includes an organizational profile, contact information, legal information, customers, partners etc.
+
+\begin{center}
+   \includegraphics[width=170mm]{./img/yve1.png}
+   \captionof{figure}{Van Duyne Pattern E1}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/yvdpe4.png}
+   \captionof{figure}{Van Duyne Pattern E4}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/yvdpe5.png}
+   \captionof{figure}{Van Duyne Pattern E5}
+\end{center}
 
 ### 3.2.1. Site 2: Movistar+
 
@@ -168,7 +224,7 @@ When a content is charging there is an animation that point the work in progress
    \captionof{figure}{Visibility of system status example 1}
 \end{center}
 \begin{center}
-   \includegraphics[width=100mm]{./img/mn1_2.png}
+   \includegraphics[width=70mm]{./img/mn1_2.png}
    \captionof{figure}{Visibility of system status example 2}
 \end{center}
 
@@ -292,8 +348,22 @@ The webpage is monetized through two forms: 1) premium subscriptions and 2) pre-
 
 ### 4.1.2. Design
 
-[comment1]: <> (We can write the main functionalities and put images of our prototypes)
-
+\begin{center}
+   \includegraphics[width=170mm]{./img/p1.png}
+   \captionof{figure}{Home menu without Parental Control}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/p2.png}
+   \captionof{figure}{Account Settings Menu}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/p3.png}
+   \captionof{figure}{Identification form for applying settings changes}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/p4.png}
+   \captionof{figure}{Home menu with Parental Control}
+\end{center}
 
 
 ## 4.2. Prototype 2
@@ -304,12 +374,31 @@ The second prototype, which was “ScoobyMovie”, had a much more similar main 
 
 ### 4.1.2. Design
 
-[comment2]: <> (We can write the main functionalities and put images of our prototypes)
-
+\begin{center}
+   \includegraphics[width=170mm]{./img/p2_2.png}
+   \captionof{figure}{Home Page}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/p2_22.png}
+   \captionof{figure}{Sign Up Page}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/p2_23.png}
+   \captionof{figure}{Play Page}
+\end{center}
 
 \newpage
 
 # 5. New Prototype
+
+\begin{center}
+   \includegraphics[width=170mm]{./img/prot1.png}
+   \captionof{figure}{Final prototype home page}
+\end{center}
+\begin{center}
+   \includegraphics[width=170mm]{./img/prot2.png}
+   \captionof{figure}{Final prototype with side menu displayed}
+\end{center}
 
 ## 5.1. Design Reasons
 
